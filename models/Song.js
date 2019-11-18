@@ -34,6 +34,10 @@ const SongSchema = new mongoose.Schema({
   type: {
     type: String,
     required: true
+  },
+  feedback: {
+    likes: { type: Number, min: 0 },
+    dislikes: { type: Number, min: 0 }
   }
 });
 

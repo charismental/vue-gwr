@@ -31,6 +31,11 @@ const UserSchema = new mongoose.Schema({
     type: [mongoose.Schema.Types.ObjectId],
     required: true,
     ref: "Song"
+  },
+  disliked: {
+    type: [mongoose.Schema.Types.ObjectId],
+    required: true,
+    ref: "Song"
   }
 });
 
