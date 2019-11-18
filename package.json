@@ -1,0 +1,29 @@
+{
+  "name": "vue-gracewayradio",
+  "version": "1.0.0",
+  "description": "Vue-GraphQL-Apollo-Vuetify",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "client": "cd client && npm run serve",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
+  },
+  "keywords": [],
+  "author": "Tristin",
+  "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "apollo-server": "^2.9.9",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.7.11",
+    "vue-apollo": "^3.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "nodemon": "^1.18.3"
+  }
+}

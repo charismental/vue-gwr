@@ -1,0 +1,49 @@
+type User {
+    _id: ID
+    username: String!
+    email: String!
+    password: String!
+    avatar: String
+    joinDate: String
+    favorites: [Song]
+}
+
+type Song {
+    _id: ID
+    title: String
+    combine: String
+    artist: String
+    album: String
+    minsec: String!
+    duration: Int!
+    picture: String
+    buycd: String
+    songid: Int!
+    type: String!
+}
+
+type Token {
+    token: String!
+}
+
+type LikesFaves {
+    likes: Int
+    dislikes: Int
+    favorites: [Song]
+}
+
+type Mutation {
+#     updateUser(username: String!, password: String!): Token
+#     signinUser(username: String!, password: String!): Token
+    signupUser(username: String!, email: String!, password: String!): Token
+#     likeSong(songId: ID!, username: String!): LikesFaves!
+#     dislikeSong(songId: ID!, username: String!): LikesFaves!
+#     resetSong(songId: ID!, username: String!): LikesFaves!
+}
+
+type Query {
+    getSongs: [Song]
+    getCurrentUser: User
+    # getSong(songId: ID!) Song!
+    # searchSongs(searchTerm: String): [Song]
+}
