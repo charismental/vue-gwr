@@ -35,7 +35,7 @@ export const SIGNIN_USER = gql`
 
 export const SIGNUP_USER = gql`
     mutation($username: String!, $email: String! $password: String!) {
-        signinUser(username: $username, email: $email, password: $password) {
+        signupUser(username: $username, email: $email, password: $password) {
             token
         }
     }
@@ -62,8 +62,8 @@ export const GET_SONGS = gql`
 `
 
 export const GET_SONG = gql`
-    query(songId) {
-        getSong(songId: songId) {
+    query($songId: ID!) {
+        getSong(songId: $songId) {
             _id
             title
             artist
