@@ -31,6 +31,9 @@ export default new Vuex.Store({
     SET_SONG: (state, song) => {
       state.song = song
     },
+    SET_ERROR: (state, error) => {
+      state.error = error
+    },
     SET_AUTH_ERROR: (state, authError) => {
       state.authError = authError
     },
@@ -84,7 +87,11 @@ export default new Vuex.Store({
       ApolloClient
         .mutate({
           mutation: SIGNUP_USER,
-          variables: formData
+          variables: {
+            email: formData.email,
+            password: formData.password,
+            username: formData.username
+          }
         })
         .then(({ data }) => {
           commit('SET_LOADING', false)
