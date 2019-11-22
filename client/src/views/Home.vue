@@ -1,13 +1,14 @@
 <template>
-  <div class="home">
-    <h1>Welcome!</h1>
+  <div>
+    <v-card-title>
+      <h1 class="title">Welcome!</h1>
+    </v-card-title>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
-  name: 'home',
+  name: 'home'
 }
 </script>
