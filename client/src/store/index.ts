@@ -2,8 +2,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
+import ApolloClient from 'apollo-boost'
 
-import { defaultClient as ApolloClient } from '../main'
+
 import {
   GET_CURRENT_USER,
   SIGNIN_USER,
@@ -11,6 +12,8 @@ import {
   GET_SONGS,
   GET_SONG
 } from '../queries'
+
+import { current } from './current.js'
 
 Vue.use(Vuex)
 
@@ -153,5 +156,6 @@ export default new Vuex.Store({
     song: state => state.song
   },
   modules: {
+    current
   }
 })
