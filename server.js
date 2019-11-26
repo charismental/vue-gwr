@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
+const chokidar = require('chokidar');
 
 // typeDefs and Resolvers
 const filePath = path.join(__dirname, "typeDefs.gql");
@@ -13,6 +14,7 @@ const resolvers = require("./resolvers");
 require("dotenv").config({ path: "variables.env" });
 const User = require("./models/User");
 const Song = require("./models/Song");
+const SongInfo = require("./models/SongInfo");
 
 mongoose
     .connect(process.env.MONGO_URI, {
@@ -45,10 +47,27 @@ mongoose
         }),
         context: async ({ req }) => {
             const token = req.headers["authorization"]
-            return { User, Song, currentUser: await getUser(token) }
+            return { User, Song, SongInfo, currentUser: await getUser(token) }
         }
     });
 
     server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
         console.log(`Server listening on ${url}`);
+    });
+    
+
+    const watcher = chokidar.watch('./ftp/info.json').on('change', async () => {
+        try {
+            fs.readFile('./ftp/info.json', async (err, data) => {
+                const current = JSON.parse(data)
+                const updatedInfo = await SongInfo.replaceOne({}, current)
+            })
+            // let raw = fs.readFileSync('./ftp/info.json');
+            // let current = JSON.parse(raw).songInfo;
+            // const updatedInfo = await SongInfo.replaceOne({}, current);
+            // return updatedInfo;
+            // console.log(current)
+        } catch(err) {
+            console.error(err)
+        }
     });
