@@ -38,6 +38,9 @@ const SongSchema = new mongoose.Schema({
   feedback: {
     likes: { type: Number, min: 0 },
     dislikes: { type: Number, min: 0 }
+  },
+  genre: {
+    type: String
   }
 });
 
