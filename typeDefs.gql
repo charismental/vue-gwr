@@ -19,9 +19,16 @@ type Song {
     duration: Int!
     picture: String
     buycd: String
-    songid: Int!
+    songid: String!
     type: String!
     feedback: Feedback!
+    genre: String
+}
+
+type SongInfo {
+    song_info: Song
+    song_history: [Song]
+    song_queue: [Song]
 }
 
 type Feedback {
