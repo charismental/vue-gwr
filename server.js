@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
 const chokidar = require('chokidar');
+const io = require('socket.io')();
 
 // typeDefs and Resolvers
 const filePath = path.join(__dirname, "typeDefs.gql");
@@ -25,6 +26,10 @@ mongoose
     })
     .then(() => {
         console.log("Connected to MongoDB")
+        SongInfo.watch()
+            .on('change', () => {
+                io.sockets.emit('updateSongInfo')
+            })
     })
     .catch(err => console.error(err));
 
@@ -54,19 +59,24 @@ mongoose
     server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
         console.log(`Server listening on ${url}`);
     });
-    
 
-    const watcher = chokidar.watch('./ftp/info.json').on('change', async () => {
+    io.sockets.on('connection', socket => {
+        console.log('A new connection!');
+        socket.on('connected', msg => {
+            console.log(msg);
+        })
+        socket.on('pingServer', msg => {
+            console.log(msg)
+        })
+    })
+
+    io.listen(3000);
+    const watcher = chokidar.watch('./ftp/info.json').on('change', () => {
         try {
             fs.readFile('./ftp/info.json', async (err, data) => {
                 const current = JSON.parse(data)
                 const updatedInfo = await SongInfo.replaceOne({}, current)
             })
-            // let raw = fs.readFileSync('./ftp/info.json');
-            // let current = JSON.parse(raw).songInfo;
-            // const updatedInfo = await SongInfo.replaceOne({}, current);
-            // return updatedInfo;
-            // console.log(current)
         } catch(err) {
             console.error(err)
         }
