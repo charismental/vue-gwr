@@ -13,13 +13,13 @@
           </v-col>
 
           <v-col sm="8">
-            <v-card-title class="headline" v-text="songInfo.title"></v-card-title>
-            <v-card-subtitle v-text="songInfo.artist"></v-card-subtitle>
+            <v-card-title class="headline" v-text="currentSongInfo.title"></v-card-title>
+            <v-card-subtitle v-text="currentSongInfo.artist"></v-card-subtitle>
           </v-col>
 
           <v-col sm="2">
             <v-avatar class="ma-1" size="100" tile>
-              <v-img :src="imgUrl(songInfo)"></v-img>
+              <v-img :src="imgUrl(currentSongInfo)"></v-img>
             </v-avatar>
           </v-col>
         </v-row>
@@ -39,7 +39,6 @@
         </div>
       </v-card>
     </v-col>-->
-
   </div>
 </template>
 
@@ -51,11 +50,25 @@ export default {
   name: "player",
   data() {
     return {
-      isPlaying: false
+      isPlaying: false,
+      isConnected: false,
+      socketMessage: ""
     };
   },
+  sockets: {
+    connect() {
+      this.isConnected = true
+    },
+
+    disconnect() {
+      this.isConnected = false
+    },
+    updateSongInfo() {
+      this.refreshSongInfo()
+    }
+  },
   computed: {
-    ...mapGetters(["songInfo", "songHistory", "songQueue"]),
+    ...mapGetters(["currentSongInfo"]),
     stream: () => {
       const streamObject = new Howl({
         src: "http://136.0.16.57:8000/.stream",
@@ -67,9 +80,14 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch("getCurrent");
+    this.$store.dispatch("getCurrentSongs")
   },
   methods: {
+    refreshSongInfo() {
+      this.$store.dispatch("getCurrentSongs")
+      // eslint-disable-next-line no-console
+      console.log('update the song info, jimmy!')
+    },
     playStream() {
       if (!this.isPlaying) {
         this.stream.play();
@@ -82,14 +100,14 @@ export default {
         this.isPlaying = false;
       }
     },
-    imgUrl (song) {
-      const url = 'https://radiomv.org/samHTMweb/'
+    imgUrl(song) {
+      const url = "https://radiomv.org/samHTMweb/";
       if (song.picture) {
-        return url + song.picture
+        return url + song.picture;
       } else if (this.loading) {
-        return url + 'loading.gif'
+        return url + "loading.gif";
       } else {
-        return url + 'customMissing.jpg'
+        return url + "customMissing.jpg";
       }
     }
   }
