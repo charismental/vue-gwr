@@ -7,10 +7,17 @@ import vuetify from './plugins/vuetify';
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+import socketio from 'socket.io-client';
+import VueSocketIO from 'vue-socket.io';
+
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
-
+export const SocketInstance = socketio('http://localhost:3000', {
+  reconnect: true
+});
+Vue.use(VueSocketIO, SocketInstance)
+Vue.use(VueApollo)
 Vue.config.productionTip = false
 
 export const defaultClient = new ApolloClient({
