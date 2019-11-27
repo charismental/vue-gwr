@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
-import ApolloClient from 'apollo-boost'
+import { defaultClient as ApolloClient } from '../main'
 
 
 import {
@@ -10,7 +10,8 @@ import {
   SIGNIN_USER,
   SIGNUP_USER, 
   GET_SONGS,
-  GET_SONG
+  GET_SONG,
+  GET_CURRENT_SONGS
 } from '../queries'
 
 import { current } from './current.js'
@@ -20,6 +21,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     songs: [],
+    currentSongInfo: {},
+    currentSongHistory: [],
+    currentSongQueue: [],
     song: {},
     user: null,
     loading: false,
@@ -30,6 +34,15 @@ export default new Vuex.Store({
   mutations: {
     SET_SONGS: (state, songs) => {
       state.songs = songs
+    },
+    SET_CURRENT_SONG_INFO: (state, song) => {
+      state.currentSongInfo = song
+    },
+    SET_CURRENT_SONG_HISTORY: (state, songs) => {
+      state.currentSongHistory = songs
+    },
+    SET_CURRENT_SONG_QUEUE: (state, songs) => {
+      state.currentSongQueue = songs
     },
     SET_SONG: (state, song) => {
       state.song = song
@@ -114,6 +127,24 @@ export default new Vuex.Store({
         router.push('/')
       }
     },
+    getCurrentSongs: async ({ commit }) => {
+      commit('SET_LOADING', true)
+      ApolloClient
+        .query({
+          query: GET_CURRENT_SONGS,
+          fetchPolicy:'no-cache'
+        })
+        .then(({ data }) => {
+          commit('SET_CURRENT_SONG_INFO', data.getCurrentSongs.song_info)
+          commit('SET_CURRENT_SONG_HISTORY', data.getCurrentSongs.song_history)
+          commit('SET_CURRENT_SONG_QUEUE', data.getCurrentSongs.song_queue)
+          commit('SET_LOADING', false)
+        })
+        .catch(err => {
+          commit('SET_LOADING', false)
+          console.error(err)
+        })
+    },
     getSongs: async ({ commit }) => {
       commit('SET_LOADING', true)
       ApolloClient
@@ -153,9 +184,11 @@ export default new Vuex.Store({
     user: state => state.user,
     authError: state => state.authError,
     error: state => state.error,
-    song: state => state.song
+    song: state => state.song,
+    currentSongInfo: state => state.currentSongInfo,
+    currentSongHistory: state => state.currentSongHistory,
+    currentSongQueue: state => state.currentSongQueue
   },
   modules: {
-    current
   }
 })
