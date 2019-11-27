@@ -58,6 +58,7 @@ type Mutation {
 }
 
 type Query {
+    getCurrentSongs: SongInfo!
     getSongs: [Song]
     getCurrentUser: User
     getSong(songId: ID!): Song!

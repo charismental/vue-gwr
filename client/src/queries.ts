@@ -42,6 +42,43 @@ export const SIGNUP_USER = gql`
 `
 
 // Song Queries
+export const GET_CURRENT_SONGS = gql`
+    query {
+        getCurrentSongs {
+            song_info {
+                _id
+                title
+                artist
+                album
+                picture
+                duration
+                minsec
+                songid
+            }
+            song_history {
+                _id
+                title
+                artist
+                album
+                picture
+                duration
+                minsec
+                songid
+            }
+            song_queue {
+                _id
+                title
+                artist
+                album
+                picture
+                duration
+                minsec
+                songid
+            }
+        }
+    }
+`
+
 export const GET_SONGS = gql`
     query {
         getSongs {

@@ -20,6 +20,10 @@ module.exports = {
       });
       return user;
     },
+    getCurrentSongs: async (_, args, { SongInfo }) => {
+      const songInfo = await SongInfo.findOne()
+      return songInfo
+    },
     getSongs: async (_, args, { Song }) => {
       const songs = await Song.find({}).sort({ artist: "asc" });
       return songs;
