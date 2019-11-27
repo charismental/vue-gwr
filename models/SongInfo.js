@@ -29,7 +29,7 @@ const SongInfoSchema = new mongoose.Schema({
       type: String
     },
     songid: {
-      type: Number,
+      type: String,
       required: true
     },
     type: {
@@ -69,7 +69,7 @@ const SongInfoSchema = new mongoose.Schema({
         type: String
       },
       songid: {
-        type: Number,
+        type: String,
         required: true
       },
       type: {
@@ -110,7 +110,7 @@ const SongInfoSchema = new mongoose.Schema({
         type: String
       },
       songid: {
-        type: Number,
+        type: String,
         required: true
       },
       type: {
