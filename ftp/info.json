@@ -1,536 +1,536 @@
 {
-    "song_info": {
-      "title": "Let's Make a Deal",
+  "song_info": {
+    "title": "The Cross-Centered Life Part 3",
+    "artist": "Paul Washer",
+    "album": "Grace Community Church",
+    "minsec": "73:51",
+    "duration": 4431099,
+    "genre": "Other",
+    "picture": "paul_washer_profile.jpg",
+    "buycd": "http://www.heartcrymissionary.com/",
+	"songid": "5660",
+	"type" : "C"
+  },
+  "song_history": [
+    
+    {
+      "title": "Paul Washer Intro",
+      "artist": "Paul Washer",
+      "album": "Heartcry Missionary Society",
+      "minsec": "0:50",
+      "duration": 50103,
+      "picture": "paul_washer_profile.jpg",
+      "buycd": "",
+	  "songid": "13122",
+	  "type" : "?"
+    },
+    
+    {
+      "title": "Here We Are",
+      "artist": "Don Moen",
+      "album": "Bless the Lord",
+      "minsec": "1:38",
+      "duration": 98351,
+      "picture": "az_14875_Bless the Lord_Don Moen.jpg",
+      "buycd": "",
+	  "songid": "14875",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Your Love Is Extravagant",
+      "artist": "Darrell Evans;Integrity's Hosanna! Music",
+      "album": "Rock of Refuge",
+      "minsec": "6:14",
+      "duration": 374047,
+      "picture": "az_14760_Rock of Refuge_Darrell EvansIntegrity's Hosanna Music.jpg",
+      "buycd": "",
+	  "songid": "14760",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "I Am Yours",
+      "artist": "Vineyard Worship",
+      "album": "I Am Yours - Live From The Cause To Live For 2015",
+      "minsec": "8:33",
+      "duration": 513750,
+      "picture": "az_B925969_I Am Yours - Live From The Cause To Live For 2015_Vineyard Worship.jpg",
+      "buycd": "",
+	  "songid": "17790",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Hallowed Be Your Name",
+      "artist": "Integrity Worship Musicians",
+      "album": "Majesty: Instrumental by Interludes",
+      "minsec": "3:23",
+      "duration": 203807,
+      "picture": "az_15096_Majesty Instrumental by Interludes_Integrity Worship Musicians.jpg",
+      "buycd": "",
+	  "songid": "15096",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "I Will Call Upon The Lord",
+      "artist": "Marty Nystrom;Integrity's Hosanna! Music",
+      "album": "Forever Grateful",
+      "minsec": "2:05",
+      "duration": 125701,
+      "picture": "az_B922608_Forever Grateful_Marty NystromIntegrity's Hosanna Music.jpg",
+      "buycd": "",
+	  "songid": "17419",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "David Pawson Exit",
+      "artist": "David Pawson",
+      "album": "",
+      "minsec": "0:40",
+      "duration": 40098,
+      "picture": "david.jpg",
+      "buycd": "",
+	  "songid": "13113",
+	  "type" : "?"
+    },
+    
+    {
+      "title": "The Final Facts pt. 1",
+      "artist": "David Pawson",
+      "album": "The Final Facts",
+      "minsec": "38:32",
+      "duration": 2312819,
+      "picture": "david.jpg",
+      "buycd": "http://davidpawson.com",
+	  "songid": "3037",
+	  "type" : "C"
+    },
+    
+    {
+      "title": "David Pawson intro",
+      "artist": "David Pawson",
+      "album": "",
+      "minsec": "0:46",
+      "duration": 46106,
+      "picture": "david.jpg",
+      "buycd": "",
+	  "songid": "13112",
+	  "type" : "?"
+    },
+    
+    {
+      "title": "Hallelujah (Live)",
+      "artist": "Hillsong Worship",
+      "album": "For All You've Done (Live)",
+      "minsec": "9:05",
+      "duration": 545776,
+      "picture": "az_B9251089_For All You've Done (Live)_Hillsong Worship.jpg",
+      "buycd": "",
+	  "songid": "17910",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Alabaster Jar (Worthy Refrain)",
+      "artist": "Klaus & Kari Jobe",
+      "album": "Healing Waters",
+      "minsec": "3:08",
+      "duration": 188526,
+      "picture": "az_B922405_Healing Waters_Klaus & Kari Jobe.jpg",
+      "buycd": "",
+	  "songid": "17216",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "All I Want Is You (Live)",
+      "artist": "River Valley Worship;Brent Jones",
+      "album": "Brick House Sessions, Vol. One",
+      "minsec": "8:54",
+      "duration": 534335,
+      "picture": "az_B92211_Brick House Sessions, Vol. One_River Valley WorshipBrent Jones.jpg",
+      "buycd": "",
+	  "songid": "16822",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Majesty",
+      "artist": "Brent Miller",
+      "album": "CCM Top 50 - Contemporary Christian Music Songs, Vol. 1",
+      "minsec": "4:19",
+      "duration": 259683,
+      "picture": "az_B922880_CCM Top 50 - Contemporary Christian Music Songs, Vol. 1_Brent Miller.jpg",
+      "buycd": "",
+	  "songid": "17691",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Nothing But The Blood",
+      "artist": "Keith & Kristyn Getty",
+      "album": "Hymns For The Christian Life (Deluxe)",
+      "minsec": "4:56",
+      "duration": 296646,
+      "picture": "az_16326_Hymns For The Christian Life (Deluxe)_Keith & Kristyn Getty.jpg",
+      "buycd": "",
+	  "songid": "16326",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "The Battle Belongs To the Lord",
+      "artist": "Kent Henry;Integrity's Hosanna! Music",
+      "album": "In His Presence",
+      "minsec": "3:05",
+      "duration": 185940,
+      "picture": "az_16530_In His Presence_Kent HenryIntegrity's Hosanna Music.jpg",
+      "buycd": "",
+	  "songid": "16530",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Blessed Are The Broken",
+      "artist": "Integrity's Hosanna! Music;David Baroni",
+      "album": "Our Heart",
+      "minsec": "4:39",
+      "duration": 279771,
+      "picture": "az_15189_Our Heart_Integrity's Hosanna MusicDavid Baroni.jpg",
+      "buycd": "",
+	  "songid": "15189",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Who Am I?",
+      "artist": "Dennis Jernigan",
+      "album": "The Worshiper's Collection, Volume 1",
+      "minsec": "4:34",
+      "duration": 274416,
+      "picture": "az_B922108_The Worshiper's Collection, Volume 1_Dennis Jernigan.jpg",
+      "buycd": "",
+	  "songid": "16919",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Curtis Dougherty Exit",
       "artist": "Curtis Dougherty",
       "album": "CDM Ministries",
-      "minsec": "56:28",
-      "duration": 3388787,
-      "genre": "message",
+      "minsec": "0:45",
+      "duration": 45610,
       "picture": "curtis.jpg",
       "buycd": "https://www.cascadechapel.com",
-      "songid": "16167",
-      "type" : "C"
+	  "songid": "13111",
+	  "type" : "C"
     },
-    "song_history": [
-      
-      {
-        "title": "Curtis Dougherty Intro",
-        "artist": "Curtis Dougherty",
-        "album": "CDM Ministries",
-        "minsec": "0:45",
-        "duration": 45610,
-        "picture": "curtis.jpg",
-        "buycd": "https://www.cascadechapel.com",
-        "songid": "13110",
-        "type" : "C"
-      },
-      
-      {
-        "title": "Exalt the Lord Our God",
-        "artist": "Jeff Hamlin;Integrity's Hosanna! Music",
-        "album": "You Are My God",
-        "minsec": "4:02",
-        "duration": 242939,
-        "picture": "az_15053_You Are My God_Jeff HamlinIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "15053",
-        "type" : "S"
-      },
-      
-      {
-        "title": "I Love You Lord",
-        "artist": "Kathryn Scott",
-        "album": "Live Worship At Focusfest",
-        "minsec": "2:22",
-        "duration": 142054,
-        "picture": "az_16372_Live Worship At Focusfest_Kathryn Scott.jpg",
-        "buycd": "",
-        "songid": "16372",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Surrender",
-        "artist": "Vineyard Worship",
-        "album": "Come Now Is the Time: The Platinum Collection",
-        "minsec": "4:23",
-        "duration": 263366,
-        "picture": "az_B925977_Come Now Is the Time The Platinum Collection_Vineyard Worship.jpg",
-        "buycd": "",
-        "songid": "17798",
-        "type" : "S"
-      },
-      
-      {
-        "title": "His Glory Appears (Live)",
-        "artist": "Hillsong Worship",
-        "album": "Faith + Hope + Love (Live)",
-        "minsec": "3:19",
-        "duration": 199941,
-        "picture": "az_B9251093_Faith  Hope  Love (Live)_Hillsong Worship.jpg",
-        "buycd": "",
-        "songid": "17914",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Because He Lives (Live) [feat. Crystal Yates]",
-        "artist": "People & Songs;Crystal Yates",
-        "album": "Live from La Porte - Turn up the Lights: Songwriter Series, Vol. 1",
-        "minsec": "2:57",
-        "duration": 177685,
-        "picture": "az_B9251051_Live from La Porte - Turn up the Lights Songwriter Series, Vol. 1_People & SongsCrystal Yates.jpg",
-        "buycd": "",
-        "songid": "17872",
-        "type" : "S"
-      },
-      
-      {
-        "title": "O Lord to You",
-        "artist": "Bob Fitts;Integrity's Hosanna! Music",
-        "album": "He Will Save You",
-        "minsec": "4:26",
-        "duration": 266475,
-        "picture": "az_14739_He Will Save You_Bob FittsIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "14739",
-        "type" : "S"
-      },
-      
-      {
-        "title": "No Condemnation",
-        "artist": "Kent Henry;Integrity's Hosanna! Music",
-        "album": "Glorify Thy Name",
-        "minsec": "3:54",
-        "duration": 234658,
-        "picture": "az_16543_Glorify Thy Name_Kent HenryIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "16543",
-        "type" : "S"
-      },
-      
-      {
-        "title": "God Will Make A Way",
-        "artist": "Don Moen",
-        "album": "Worship With Don Moen",
-        "minsec": "4:51",
-        "duration": 291735,
-        "picture": "az_15056_Worship With Don Moen_Don Moen.jpg",
-        "buycd": "",
-        "songid": "15056",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Jamie Buckingham Exit",
-        "artist": "Jamie Buckingham",
-        "album": "",
-        "minsec": "0:46",
-        "duration": 46106,
-        "picture": "Jamie2.jpg",
-        "buycd": "",
-        "songid": "13121",
-        "type" : "?"
-      },
-      
-      {
-        "title": "Our Mission to Kiss Frogs",
-        "artist": "Jamie Buckingham",
-        "album": "Jamie Buckingham Ministries",
-        "minsec": "31:40",
-        "duration": 1900989,
-        "picture": "Jamie2.jpg",
-        "buycd": "http://www.jamiebuckinghamministries.com",
-        "songid": "5013",
-        "type" : "C"
-      },
-      
-      {
-        "title": "Jamie Buckingham Intro",
-        "artist": "Jamie Buckingham",
-        "album": "",
-        "minsec": "0:52",
-        "duration": 52114,
-        "picture": "Jamie2.jpg",
-        "buycd": "",
-        "songid": "13120",
-        "type" : "?"
-      },
-      
-      {
-        "title": "Have Mercy On Me",
-        "artist": "Integrity Worship Musicians",
-        "album": "Mercy: Instrumental by Interludes",
-        "minsec": "3:50",
-        "duration": 230191,
-        "picture": "az_15120_Mercy Instrumental by Interludes_Integrity Worship Musicians.jpg",
-        "buycd": "",
-        "songid": "15120",
-        "type" : "S"
-      },
-      
-      {
-        "title": "You Are My All In All",
-        "artist": "Dennis Jernigan;Natalie Grant",
-        "album": "Hands Lifted High",
-        "minsec": "4:16",
-        "duration": 256470,
-        "picture": "az_B922140_Hands Lifted High_Dennis JerniganNatalie Grant.jpg",
-        "buycd": "",
-        "songid": "16951",
-        "type" : "S"
-      },
-      
-      {
-        "title": "10,000 Reasons",
-        "artist": "Rend Collective Experiment",
-        "album": "Songs 4 Worship: Hymns of the Ages",
-        "minsec": "5:00",
-        "duration": 300904,
-        "picture": "az_B922703_Songs 4 Worship Hymns of the Ages_Rend Collective Experiment.jpg",
-        "buycd": "",
-        "songid": "17514",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Holy Holy Holy",
-        "artist": "Vineyard Worship;Scott Underwood",
-        "album": "Hymns in the Vineyard",
-        "minsec": "3:57",
-        "duration": 237349,
-        "picture": "az_B9251270_Hymns in the Vineyard_Vineyard WorshipScott Underwood.jpg",
-        "buycd": "",
-        "songid": "18091",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Hiding Place",
-        "artist": "Debbie Fortnum",
-        "album": "Join the Party!",
-        "minsec": "4:47",
-        "duration": 287504,
-        "picture": "az_B9251018_Join the Party_Debbie Fortnum.jpg",
-        "buycd": "",
-        "songid": "17839",
-        "type" : "S"
-      },
-      
-      {
-        "title": "For The Cause",
-        "artist": "Keith & Kristyn Getty",
-        "album": "Facing A Task Unfinished",
-        "minsec": "4:36",
-        "duration": 276088,
-        "picture": "az_16347_Facing A Task Unfinished_Keith & Kristyn Getty.jpg",
-        "buycd": "",
-        "songid": "16347",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Alexander Scourby Exit",
-        "artist": "Alexander Scourby",
-        "album": "",
-        "minsec": "0:40",
-        "duration": 40098,
-        "picture": "alexander-scourby2.jpg",
-        "buycd": "",
-        "songid": "13125",
-        "type" : "?"
-      },
-      
-      {
-        "title": "Isaiah ch. 31 to 35",
-        "artist": "Alexander Scourby",
-        "album": "NKJV",
-        "minsec": "13:23",
-        "duration": 803328,
-        "picture": "alexander-scourby2.jpg",
-        "buycd": "ubible.me",
-        "songid": "6353",
-        "type" : "C"
-      },
-      
-      {
-        "title": "Alexander Scourby Intro",
-        "artist": "Alexander Scourby",
-        "album": "",
-        "minsec": "0:40",
-        "duration": 40098,
-        "picture": "alexander-scourby2.jpg",
-        "buycd": "",
-        "songid": "13124",
-        "type" : "?"
-      },
-      
-      {
-        "title": "King of All",
-        "artist": "Crispin Schroeder",
-        "album": "Ruined - Original Worship Songs From the Vineyard Church",
-        "minsec": "5:54",
-        "duration": 354064,
-        "picture": "az_B922740_Ruined - Original Worship Songs From the Vineyard Church_Crispin Schroeder.jpg",
-        "buycd": "",
-        "songid": "17551",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Clap Your Hands",
-        "artist": "Charlie Leblanc;Integrity's Hosanna! Music",
-        "album": "Lord Of All",
-        "minsec": "2:25",
-        "duration": 145293,
-        "picture": "az_14803_Lord Of All_Charlie LeblancIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "14803",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Make Yourself At Home",
-        "artist": "Kelly Willard",
-        "album": "Psalms, Hymns and Spiritual Songs",
-        "minsec": "4:07",
-        "duration": 247014,
-        "picture": "az_16404_Psalms, Hymns and Spiritual Songs_Kelly Willard.jpg",
-        "buycd": "",
-        "songid": "16404",
-        "type" : "S"
-      },
-      
-      {
-        "title": "O' How I Love Jesus",
-        "artist": "Vineyard Worship",
-        "album": "Intimacy",
-        "minsec": "5:18",
-        "duration": 318328,
-        "picture": "az_B9251224_Intimacy_Vineyard Worship.jpg",
-        "buycd": "",
-        "songid": "18045",
-        "type" : "S"
-      },
-      
-      {
-        "title": "You Are Near (Live/For This Cause Album Version)",
-        "artist": "Hillsong Worship",
-        "album": "For This Cause (Live)",
-        "minsec": "6:08",
-        "duration": 368927,
-        "picture": "az_B9251081_For This Cause (Live)_Hillsong Worship.jpg",
-        "buycd": "",
-        "songid": "17902",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Ern Baxter Exit",
-        "artist": "Ern Baxter",
-        "album": "",
-        "minsec": "0:50",
-        "duration": 50103,
-        "picture": "Ern_Baxter3.jpg",
-        "buycd": "",
-        "songid": "13119",
-        "type" : "?"
-      },
-      
-      {
-        "title": "Having The Mind Of Christ",
-        "artist": "Ern Baxter",
-        "album": "Ern Baxter Teaching Legacy",
-        "minsec": "60:03",
-        "duration": 3603122,
-        "picture": "Ern_Baxter3.jpg",
-        "buycd": "",
-        "songid": "4414",
-        "type" : "C"
-      },
-      
-      {
-        "title": "Ern Baxter Intro",
-        "artist": "Ern Baxter",
-        "album": "",
-        "minsec": "0:45",
-        "duration": 45113,
-        "picture": "Ern_Baxter3.jpg",
-        "buycd": "",
-        "songid": "13118",
-        "type" : "?"
-      },
-      
-      {
-        "title": "God Is the Strength of My Heart",
-        "artist": "J. Daniel Smith;The Integrity Worship Singers",
-        "album": "Songs 4 Worship: Prepare the Way",
-        "minsec": "5:29",
-        "duration": 329613,
-        "picture": "az_B9251037_Songs 4 Worship Prepare the Way_J. Daniel SmithThe Integrity Worship Singers.jpg",
-        "buycd": "",
-        "songid": "17858",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Let's Make a Deal!",
-        "artist": "Curtis Dougherty",
-        "album": "CDM Ministries",
-        "minsec": "56:28",
-        "duration": 3388787,
-        "genre": "message",
-        "picture": "curtis.jpg",
-        "buycd": "https://www.cascadechapel.com",
-        "songid": "16167",
-        "type" : "C"
-      }
-    ],
-    "song_queue": [
-      
-      {
-        "title": "Curtis Dougherty Exit",
-        "artist": "Curtis Dougherty",
-        "album": "CDM Ministries",
-        "minsec": "0:45",
-        "duration": 45610,
-        "picture": "curtis.jpg",
-        "buycd": "https://www.cascadechapel.com",
-        "songid": "13111",
-        "type" : "C"
-      },
-      
-      {
-        "title": "A Pure Heart",
-        "artist": "Rusty Nelson;Integrity's Hosanna! Music",
-        "album": "Take the City",
-        "minsec": "2:45",
-        "duration": 165851,
-        "picture": "az_B922275_Take the City_Rusty NelsonIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "17086",
-        "type" : "S"
-      },
-      
-      {
-        "title": "I Stand in You",
-        "artist": "Kelly Willard",
-        "album": "I Stand in You",
-        "minsec": "3:39",
-        "duration": 219063,
-        "picture": "az_16494_I Stand in You_Kelly Willard.jpg",
-        "buycd": "",
-        "songid": "16494",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Abounding Love (Interlude)",
-        "artist": "Integrity Worship Musicians",
-        "album": "Love: Instrumental by Interludes",
-        "minsec": "3:25",
-        "duration": 205766,
-        "picture": "az_14782_Love Instrumental by Interludes_Integrity Worship Musicians.jpg",
-        "buycd": "",
-        "songid": "14782",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Under the Blood",
-        "artist": "Great Songs Of Praise",
-        "album": "Magnify Him",
-        "minsec": "3:19",
-        "duration": 199523,
-        "picture": "az_16267_Magnify Him_Great Songs Of Praise.jpg",
-        "buycd": "",
-        "songid": "16267",
-        "type" : "S"
-      },
-      
-      {
-        "title": "The God of Israel Is Mighty",
-        "artist": "Randy Rothwell;Integrity's Hosanna! Music",
-        "album": "World's Best Praise & Worship: Messianic",
-        "minsec": "2:10",
-        "duration": 130847,
-        "picture": "az_B92222_World's Best Praise & Worship Messianic_Randy RothwellIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "16833",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Whatever Comes",
-        "artist": "People & Songs;Meg Ammons",
-        "album": "The Emerging Sound, Vol. 4",
-        "minsec": "5:49",
-        "duration": 349649,
-        "picture": "az_B9251059_The Emerging Sound, Vol. 4_People & SongsMeg Ammons.jpg",
-        "buycd": "",
-        "songid": "17880",
-        "type" : "S"
-      },
-      
-      {
-        "title": "I Love Your Ways",
-        "artist": "Vineyard Worship;Anabeth Morgan",
-        "album": "Servant Wide Awake (Live from Vancouver, WA)",
-        "minsec": "8:26",
-        "duration": 506671,
-        "picture": "az_B9251257_Servant Wide Awake (Live from Vancouver, WA)_Vineyard WorshipAnabeth Morgan.jpg",
-        "buycd": "",
-        "songid": "18078",
-        "type" : "S"
-      },
-      
-      {
-        "title": "He Is Our Peace",
-        "artist": "The Maranatha! Singers",
-        "album": "Songs 4 Worship: Prepare the Way",
-        "minsec": "3:16",
-        "duration": 196023,
-        "picture": "az_B9251007_Songs 4 Worship Prepare the Way_The Maranatha Singers.jpg",
-        "buycd": "",
-        "songid": "17828",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Revival (Shout To The North Album Version)",
-        "artist": "Robin Mark",
-        "album": "Shout To The North",
-        "minsec": "6:35",
-        "duration": 395154,
-        "picture": "az_B9251162_Shout To The North_Robin Mark.jpg",
-        "buycd": "",
-        "songid": "17983",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Celebrate Jesus",
-        "artist": "Charlie Leblanc;Integrity's Hosanna! Music",
-        "album": "Lord Of All",
-        "minsec": "3:20",
-        "duration": 200725,
-        "picture": "az_14801_Lord Of All_Charlie LeblancIntegrity's Hosanna Music.jpg",
-        "buycd": "",
-        "songid": "14801",
-        "type" : "S"
-      },
-      
-      {
-        "title": "Let's Make a Deal!",
-        "artist": "Curtis Dougherty",
-        "album": "CDM Ministries",
-        "minsec": "56:28",
-        "duration": 3388787,
-        "genre": "message",
-        "picture": "curtis.jpg",
-        "buycd": "https://www.cascadechapel.com",
-        "songid": "16167",
-        "type" : "C"
-      }
-    ]
-  }
+    
+    {
+      "title": "Light and Revelation",
+      "artist": "Curtis Dougherty",
+      "album": "Advent",
+      "minsec": "47:51",
+      "duration": 2871223,
+      "picture": "curtis.jpg",
+      "buycd": "https://www.cascadechapel.com",
+	  "songid": "16096",
+	  "type" : "?"
+    },
+    
+    {
+      "title": "Curtis Dougherty Intro",
+      "artist": "Curtis Dougherty",
+      "album": "CDM Ministries",
+      "minsec": "0:45",
+      "duration": 45610,
+      "picture": "curtis.jpg",
+      "buycd": "https://www.cascadechapel.com",
+	  "songid": "13110",
+	  "type" : "C"
+    },
+    
+    {
+      "title": "All Praise to You",
+      "artist": "All Sons & Daughters",
+      "album": "Season One",
+      "minsec": "4:40",
+      "duration": 280712,
+      "picture": "az_B922926_Season One_All Sons & Daughters.jpg",
+      "buycd": "",
+	  "songid": "17737",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Keep My Eyes On You",
+      "artist": "Kelly Willard",
+      "album": "Message from a King",
+      "minsec": "3:57",
+      "duration": 237061,
+      "picture": "az_16485_Message from a King_Kelly Willard.jpg",
+      "buycd": "",
+	  "songid": "16485",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "We Still Believe",
+      "artist": "Kathryn Scott",
+      "album": "Worship Tools - We Still Believe (Resource Edition)",
+      "minsec": "4:59",
+      "duration": 299206,
+      "picture": "az_16354_Worship Tools - We Still Believe (Resource Edition)_Kathryn Scott.jpg",
+      "buycd": "",
+	  "songid": "16354",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "What You Are",
+      "artist": "Integrity's Hosanna! Music;Don Harris",
+      "album": "Only God For Me",
+      "minsec": "4:45",
+      "duration": 285335,
+      "picture": "az_15190_Only God For Me_Integrity's Hosanna MusicDon Harris.jpg",
+      "buycd": "",
+	  "songid": "15190",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "People of the Lord",
+      "artist": "Robert Gay;Integrity's Hosanna! Music",
+      "album": "Victor's Crown",
+      "minsec": "4:18",
+      "duration": 258090,
+      "picture": "az_B9251047_Victor's Crown_Robert GayIntegrity's Hosanna Music.jpg",
+      "buycd": "",
+	  "songid": "17868",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Jesus You Are My Healer",
+      "artist": "Don Moen",
+      "album": "Thank You Lord",
+      "minsec": "7:00",
+      "duration": 420180,
+      "picture": "az_14973_Thank You Lord_Don Moen.jpg",
+      "buycd": "",
+	  "songid": "14973",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "We Cannot Contain All You Pour Out",
+      "artist": "Vineyard Worship",
+      "album": "Reveal: New Songs from Vineyard Worship",
+      "minsec": "4:23",
+      "duration": 263210,
+      "picture": "az_B925953_Reveal New Songs from Vineyard Worship_Vineyard Worship.jpg",
+      "buycd": "",
+	  "songid": "17774",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "I Will Come to You",
+      "artist": "Integrity Worship Musicians",
+      "album": "Faith: Instrumental by Interludes",
+      "minsec": "4:45",
+      "duration": 285335,
+      "picture": "az_15432_Faith Instrumental by Interludes_Integrity Worship Musicians.jpg",
+      "buycd": "",
+	  "songid": "15432",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Crown Him With Many Crowns",
+      "artist": "Integrity's Hosanna! Music;Bob Fitts",
+      "album": "Hosanna Gold",
+      "minsec": "4:02",
+      "duration": 242886,
+      "picture": "az_15296_Hosanna Gold_Integrity's Hosanna MusicBob Fitts.jpg",
+      "buycd": "",
+	  "songid": "15296",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Face To Face",
+      "artist": "Kim Walker-Smith;Skyler Smith",
+      "album": "Home",
+      "minsec": "3:57",
+      "duration": 237584,
+      "picture": "az_16555_Home_Kim Walker-SmithSkyler Smith.jpg",
+      "buycd": "",
+	  "songid": "16555",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "The Cross-Centered Life Part 3",
+      "artist": "Paul Washer",
+      "album": "Grace Community Church",
+      "minsec": "73:51",
+      "duration": 4431099,
+      "genre": "Other",
+      "picture": "paul_washer_profile.jpg",
+      "buycd": "http://www.heartcrymissionary.com/",
+	  "songid": "5660",
+	  "type" : "C"
+    }
+  ],
+  "song_queue": [
+    
+    {
+      "title": "Paul Washer Exit",
+      "artist": "Paul Washer",
+      "album": "Heartcry Missionary Society",
+      "minsec": "0:45",
+      "duration": 45610,
+      "picture": "paul_washer_profile.jpg",
+      "buycd": "",
+	  "songid": "13123",
+	  "type" : "?"
+    },
+    
+    {
+      "title": "Hungry (Falling On My Knees)",
+      "artist": "Kathryn Scott",
+      "album": "Satisfy",
+      "minsec": "5:03",
+      "duration": 303020,
+      "picture": "az_16364_Satisfy_Kathryn Scott.jpg",
+      "buycd": "",
+	  "songid": "16364",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "God Alone / Come Unto Me (Medley)",
+      "artist": "Kelly Willard",
+      "album": "Psalms, Hymns and Spiritual Songs",
+      "minsec": "6:26",
+      "duration": 386926,
+      "picture": "az_16403_Psalms, Hymns and Spiritual Songs_Kelly Willard.jpg",
+      "buycd": "",
+	  "songid": "16403",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "My Worth Is Not in What I Own",
+      "artist": "Graham Kendrick",
+      "album": "My Worth Is Not in What I Own",
+      "minsec": "4:20",
+      "duration": 260362,
+      "picture": "az_15044_My Worth Is Not in What I Own_Graham Kendrick.jpg",
+      "buycd": "",
+	  "songid": "15044",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "All Is Well (Live)",
+      "artist": "Vineyard Worship;Marie Barnett",
+      "album": "Where the Mercy Falls (Worship from the 2013 Vineyard National Conference, Vol. 2)",
+      "minsec": "7:19",
+      "duration": 439876,
+      "picture": "az_B922386_Where the Mercy Falls (Worship from the 2013 Vineyard National Conference, Vol. 2)_Vineyard WorshipMarie Barnett.jpg",
+      "buycd": "",
+	  "songid": "17197",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "First Breath",
+      "artist": "Kimberly and Alberto Rivera",
+      "album": "From His Heart to Yours",
+      "minsec": "6:25",
+      "duration": 385724,
+      "picture": "az_B922374_From His Heart to Yours_Kimberly and Alberto Rivera.jpg",
+      "buycd": "",
+	  "songid": "17185",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Magnificent (Live)",
+      "artist": "Hillsong Worship",
+      "album": "Blessed (Live)",
+      "minsec": "5:22",
+      "duration": 322534,
+      "picture": "az_B9251106_Blessed (Live)_Hillsong Worship.jpg",
+      "buycd": "",
+	  "songid": "17927",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Thou Art a Shield For Me",
+      "artist": "Kent Henry;Integrity's Hosanna! Music",
+      "album": "Glorify Thy Name",
+      "minsec": "2:38",
+      "duration": 158720,
+      "picture": "az_16546_Glorify Thy Name_Kent HenryIntegrity's Hosanna Music.jpg",
+      "buycd": "",
+	  "songid": "16546",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Revival (feat. New Irish Choir & Orchestra) [Live]",
+      "artist": "Robin Mark;New Irish Choir & Orchestra",
+      "album": "A Belfast Symphony (feat. New Irish Choir & Orchestra) [Live]",
+      "minsec": "6:05",
+      "duration": 365558,
+      "picture": "az_B922203_A Belfast Symphony (feat. New Irish Choir & Orchestra) [Live]_Robin MarkNew Irish Choir & Orchestra.jpg",
+      "buycd": "",
+	  "songid": "17014",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Adonai",
+      "artist": "Heritage Singers",
+      "album": "Renew Me",
+      "minsec": "4:17",
+      "duration": 257776,
+      "picture": "az_B922306_Renew Me_Heritage Singers.jpg",
+      "buycd": "",
+	  "songid": "17117",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "More Love, More Power",
+      "artist": "Studio Musicians",
+      "album": "Acoustic Worship - America's 25 Favorite Praise and Worship",
+      "minsec": "2:37",
+      "duration": 157335,
+      "picture": "az_B922569_Acoustic Worship - America's 25 Favorite Praise and Worship_Studio Musicians.jpg",
+      "buycd": "",
+	  "songid": "17380",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "The Cross-Centered Life Part 3",
+      "artist": "Paul Washer",
+      "album": "Grace Community Church",
+      "minsec": "73:51",
+      "duration": 4431099,
+      "genre": "Other",
+      "picture": "paul_washer_profile.jpg",
+      "buycd": "http://www.heartcrymissionary.com/",
+	  "songid": "5660",
+	  "type" : "C"
+    }
+  ]
+}
