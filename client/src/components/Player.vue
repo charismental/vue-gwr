@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <v-col cols="12">
       <v-card color="warning">
         <v-row>
@@ -25,35 +25,45 @@
         </v-row>
       </v-card>
     </v-col>
-    <!--<v-col v-for="(song, i) in songHistory.slice(0,29)" :key="i" cols="12">
-      <v-card color="warning">
-        <div class="d-flex flex-no-wrap justify-space-between">
-          <div>
-            <v-card-title class="headline" v-text="song.title"></v-card-title>
-
-            <v-card-subtitle v-text="song.artist"></v-card-subtitle>
-          </div>
-          <v-avatar class="ma-1" size="125" tile>
-            <v-img :src="imgUrl(song)"></v-img>
-          </v-avatar>
+  </div>-->
+  <v-container>
+    <v-layout>
+      <img
+        :src="imgUrl(currentSongInfo)"
+        class="main-image"
+        :class="{'mobile': $vuetify.breakpoint.smAndDown}"
+      />
+    </v-layout>
+    <div class="mt-2">
+      <span class="d-block text-center title">{{ currentSongInfo.title }}</span>
+      <span class="d-block text-center mt-n1 subtitle-1">{{ currentSongInfo.artist }}</span>
+    </div>
+    <v-row align="center" class="controls">
+      <v-col>
+        <div class="text-center">
+          <v-btn text icon height="80" width="80" @click="playStream" v-if="!isPlaying">
+            <v-icon size="80">play_arrow</v-icon>
+          </v-btn>
+          <v-btn text icon height="80" width="80" @click="pauseStream" v-else>
+            <v-icon size="80">pause</v-icon>
+          </v-btn>
         </div>
-      </v-card>
-    </v-col>-->
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import { Howl, Howler } from "howler";
-import { mapGetters } from "vuex";
+import { Howl, Howler } from "howler"
+import { mapGetters } from "vuex"
 
 export default {
   name: "player",
   data() {
     return {
       isPlaying: false,
-      isConnected: false,
-      socketMessage: ""
-    };
+      isConnected: false
+    }
   },
   sockets: {
     connect() {
@@ -75,8 +85,8 @@ export default {
         html5: true,
         // eslint-disable-next-line no-console
         onplayerror: () => console.log("play error")
-      });
-      return streamObject;
+      })
+      return streamObject
     }
   },
   created() {
@@ -86,30 +96,50 @@ export default {
     refreshSongInfo() {
       this.$store.dispatch("getCurrentSongs")
       // eslint-disable-next-line no-console
-      console.log('update the song info, jimmy!')
+      console.log("update the song info, jimmy!")
     },
     playStream() {
       if (!this.isPlaying) {
-        this.stream.play();
-        this.isPlaying = true;
+        this.stream.play()
+        this.isPlaying = true
       }
     },
     pauseStream() {
       if (this.isPlaying) {
-        this.stream.pause();
-        this.isPlaying = false;
+        this.stream.pause()
+        this.isPlaying = false
       }
     },
     imgUrl(song) {
-      const url = "https://radiomv.org/samHTMweb/";
+      const url = "https://radiomv.org/samHTMweb/"
       if (song.picture) {
-        return url + song.picture;
+        return url + song.picture
       } else if (this.loading) {
-        return url + "loading.gif";
+        return url + "loading.gif"
       } else {
-        return url + "customMissing.jpg";
+        return url + "customMissing.jpg"
       }
     }
   }
 };
 </script>
+
+<style>
+.main-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
+  border-radius: 15px;
+  height: 300px;
+  max-width: 300px;
+}
+.mobile {
+  height: 90vw;
+  max-width: 90vw;
+}
+.meta-text {
+  display: block !important;
+  text-align: center;
+}
+</style>
