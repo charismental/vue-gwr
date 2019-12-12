@@ -14,7 +14,7 @@ import {
   GET_CURRENT_SONGS
 } from '../queries'
 
-import { current } from './current.js'
+// import { current } from './current.js'
 
 Vue.use(Vuex)
 
