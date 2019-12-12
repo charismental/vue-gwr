@@ -86,18 +86,37 @@
     </v-app-bar>
 
     <v-content>
-      <v-card color="primary" class="main-content mx-auto mt-5" width="90vw">
+      <!-- <v-card color="primary"
+        :class="{'mt-n12': $vuetify.breakpoint.mdAndDown}"
+        class="main-content mx-auto mt-5" width="90vw">
         <player />
         <transition name="fade">
           <router-view></router-view>
         </transition>
-      </v-card>
+      </v-card> -->
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12" md="6">
+            <player />
+          </v-col>
+          <v-col cols="12" md="6">
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-content>
     <v-bottom-navigation
+      app
       :value="activeBtn"
       grow
       fixed
       background-color="accent">
+      <v-btn>
+        <span>Home</span>
+        <v-icon>home</v-icon>
+      </v-btn>
       <v-btn>
         <span>Recents</span>
         <v-icon>history</v-icon>
@@ -118,7 +137,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Player from './components/Player'
+import Player from './components/Player.vue'
 import { mapGetters } from 'vuex';
 
 export default Vue.extend({
