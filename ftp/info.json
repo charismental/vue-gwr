@@ -1,87 +1,63 @@
 {
   "song_info": {
-    "title": "The Cross-Centered Life Part 3",
-    "artist": "Paul Washer",
-    "album": "Grace Community Church",
-    "minsec": "73:51",
-    "duration": 4431099,
-    "genre": "Other",
-    "picture": "paul_washer_profile.jpg",
-    "buycd": "http://www.heartcrymissionary.com/",
-	"songid": "5660",
-	"type" : "C"
+    "title": "While The Shepherds Watch Their Flocks",
+    "artist": "101 Strings Orchestra",
+    "album": "The Glory Of Christmas",
+    "minsec": "2:52",
+    "duration": 172244,
+    "genre": "Christmas",
+    "picture": "R-2082412-1275790334.jpeg.jpg",
+    "buycd": "",
+	"songid": "22077",
+	"type" : "S"
   },
   "song_history": [
     
     {
-      "title": "Paul Washer Intro",
-      "artist": "Paul Washer",
-      "album": "Heartcry Missionary Society",
-      "minsec": "0:50",
-      "duration": 50103,
-      "picture": "paul_washer_profile.jpg",
+      "title": "Ding Dong Merrily On High",
+      "artist": "Maranatha! Christmas",
+      "album": "World's Greatest Christmas",
+      "minsec": "2:29",
+      "duration": 149394,
+      "picture": "az_B121917_World's Greatest Christmas_Maranatha Christmas.jpg",
       "buycd": "",
-	  "songid": "13122",
-	  "type" : "?"
-    },
-    
-    {
-      "title": "Here We Are",
-      "artist": "Don Moen",
-      "album": "Bless the Lord",
-      "minsec": "1:38",
-      "duration": 98351,
-      "picture": "az_14875_Bless the Lord_Don Moen.jpg",
-      "buycd": "",
-	  "songid": "14875",
+	  "songid": "21840",
 	  "type" : "S"
     },
     
     {
-      "title": "Your Love Is Extravagant",
-      "artist": "Darrell Evans;Integrity's Hosanna! Music",
-      "album": "Rock of Refuge",
-      "minsec": "6:14",
-      "duration": 374047,
-      "picture": "az_14760_Rock of Refuge_Darrell EvansIntegrity's Hosanna Music.jpg",
+      "title": "Ave Maria",
+      "artist": "Rachael Lampa",
+      "album": "WoW Christmas [Disc 1]",
+      "minsec": "4:54",
+      "duration": 294601,
+      "picture": "az_B1211134_WoW Christmas [Disc 1]_Rachael Lampa.jpg",
       "buycd": "",
-	  "songid": "14760",
+	  "songid": "22070",
 	  "type" : "S"
     },
     
     {
-      "title": "I Am Yours",
-      "artist": "Vineyard Worship",
-      "album": "I Am Yours - Live From The Cause To Live For 2015",
-      "minsec": "8:33",
-      "duration": 513750,
-      "picture": "az_B925969_I Am Yours - Live From The Cause To Live For 2015_Vineyard Worship.jpg",
+      "title": "O Come, O Come Emmanuel",
+      "artist": "Maranatha! Classics",
+      "album": "Top 40 Christmas",
+      "minsec": "1:43",
+      "duration": 103993,
+      "picture": "az_B121939_Top 40 Christmas_Maranatha Classics.jpg",
       "buycd": "",
-	  "songid": "17790",
+	  "songid": "21862",
 	  "type" : "S"
     },
     
     {
-      "title": "Hallowed Be Your Name",
-      "artist": "Integrity Worship Musicians",
-      "album": "Majesty: Instrumental by Interludes",
-      "minsec": "3:23",
-      "duration": 203807,
-      "picture": "az_15096_Majesty Instrumental by Interludes_Integrity Worship Musicians.jpg",
+      "title": "Angels We Have Heard On High",
+      "artist": "Crystal Lewis",
+      "album": "Holiday! A Collection Of Christmas Classics",
+      "minsec": "3:43",
+      "duration": 223914,
+      "picture": "az_B121742_Holiday A Collection Of Christmas Classics_Crystal Lewis.jpg",
       "buycd": "",
-	  "songid": "15096",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "I Will Call Upon The Lord",
-      "artist": "Marty Nystrom;Integrity's Hosanna! Music",
-      "album": "Forever Grateful",
-      "minsec": "2:05",
-      "duration": 125701,
-      "picture": "az_B922608_Forever Grateful_Marty NystromIntegrity's Hosanna Music.jpg",
-      "buycd": "",
-	  "songid": "17419",
+	  "songid": "21643",
 	  "type" : "S"
     },
     
@@ -98,14 +74,14 @@
     },
     
     {
-      "title": "The Final Facts pt. 1",
+      "title": "Saved at Last",
       "artist": "David Pawson",
-      "album": "The Final Facts",
-      "minsec": "38:32",
-      "duration": 2312819,
+      "album": "The Normal Christian Birth",
+      "minsec": "34:48",
+      "duration": 2088323,
       "picture": "david.jpg",
       "buycd": "http://davidpawson.com",
-	  "songid": "3037",
+	  "songid": "3048",
 	  "type" : "C"
     },
     
@@ -122,98 +98,86 @@
     },
     
     {
-      "title": "Hallelujah (Live)",
-      "artist": "Hillsong Worship",
-      "album": "For All You've Done (Live)",
-      "minsec": "9:05",
-      "duration": 545776,
-      "picture": "az_B9251089_For All You've Done (Live)_Hillsong Worship.jpg",
-      "buycd": "",
-	  "songid": "17910",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Alabaster Jar (Worthy Refrain)",
-      "artist": "Klaus & Kari Jobe",
-      "album": "Healing Waters",
-      "minsec": "3:08",
-      "duration": 188526,
-      "picture": "az_B922405_Healing Waters_Klaus & Kari Jobe.jpg",
-      "buycd": "",
-	  "songid": "17216",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "All I Want Is You (Live)",
-      "artist": "River Valley Worship;Brent Jones",
-      "album": "Brick House Sessions, Vol. One",
-      "minsec": "8:54",
-      "duration": 534335,
-      "picture": "az_B92211_Brick House Sessions, Vol. One_River Valley WorshipBrent Jones.jpg",
-      "buycd": "",
-	  "songid": "16822",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Majesty",
-      "artist": "Brent Miller",
-      "album": "CCM Top 50 - Contemporary Christian Music Songs, Vol. 1",
-      "minsec": "4:19",
-      "duration": 259683,
-      "picture": "az_B922880_CCM Top 50 - Contemporary Christian Music Songs, Vol. 1_Brent Miller.jpg",
-      "buycd": "",
-	  "songid": "17691",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Nothing But The Blood",
-      "artist": "Keith & Kristyn Getty",
-      "album": "Hymns For The Christian Life (Deluxe)",
-      "minsec": "4:56",
-      "duration": 296646,
-      "picture": "az_16326_Hymns For The Christian Life (Deluxe)_Keith & Kristyn Getty.jpg",
-      "buycd": "",
-	  "songid": "16326",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "The Battle Belongs To the Lord",
-      "artist": "Kent Henry;Integrity's Hosanna! Music",
-      "album": "In His Presence",
-      "minsec": "3:05",
-      "duration": 185940,
-      "picture": "az_16530_In His Presence_Kent HenryIntegrity's Hosanna Music.jpg",
-      "buycd": "",
-	  "songid": "16530",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Blessed Are The Broken",
-      "artist": "Integrity's Hosanna! Music;David Baroni",
-      "album": "Our Heart",
-      "minsec": "4:39",
-      "duration": 279771,
-      "picture": "az_15189_Our Heart_Integrity's Hosanna MusicDavid Baroni.jpg",
-      "buycd": "",
-	  "songid": "15189",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Who Am I?",
+      "title": "Hallelujah! Christ Jesus Is Born",
       "artist": "Dennis Jernigan",
-      "album": "The Worshiper's Collection, Volume 1",
-      "minsec": "4:34",
-      "duration": 274416,
-      "picture": "az_B922108_The Worshiper's Collection, Volume 1_Dennis Jernigan.jpg",
+      "album": "Like Christmas All Year 'Round",
+      "minsec": "5:03",
+      "duration": 303987,
+      "picture": "az_B121755_Like Christmas All Year 'Round_Dennis Jernigan.jpg",
       "buycd": "",
-	  "songid": "16919",
+	  "songid": "21656",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Our Humble King",
+      "artist": "Terry MacAlmon",
+      "album": "A Worshipful Christmas",
+      "minsec": "8:33",
+      "duration": 513254,
+      "picture": "az_21953_A Worshipful Christmas_Terry MacAlmon.jpg",
+      "buycd": "https://music.apple.com/us/album/little-baby-boy-instrumental-version-bonus-track/521962000?i=521962032&uo=4",
+	  "songid": "21946",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Light of the World",
+      "artist": "Brooklyn Tabernacle Choir",
+      "album": "iWorship: A Total Christmas Worship Experience [Disc 1]",
+      "minsec": "4:43",
+      "duration": 283917,
+      "picture": "az_B1211129_iWorship A Total Christmas Worship Experience [Disc 1]_Brooklyn Tabernacle Choir.jpg",
+      "buycd": "",
+	  "songid": "22065",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Beautiful Star Of Bethlehem",
+      "artist": "Ben Speer",
+      "album": "Christmas Homecoming",
+      "minsec": "4:11",
+      "duration": 251376,
+      "picture": "az_B1211084_Christmas Homecoming_Ben Speer.jpg",
+      "buycd": "",
+	  "songid": "22017",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "What Child Is This?",
+      "artist": "MercyMe",
+      "album": "WOW Christmas [Disc 2]",
+      "minsec": "3:49",
+      "duration": 229799,
+      "picture": "az_B1211144_WOW Christmas [Disc 2]_MercyMe.jpg",
+      "buycd": "",
+	  "songid": "22082",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Light A Candle",
+      "artist": "Avalon",
+      "album": "Joy - A Christmas Collection",
+      "minsec": "3:42",
+      "duration": 222451,
+      "picture": "az_B121682_Joy - A Christmas Collection_Avalon.jpg",
+      "buycd": "",
+	  "songid": "21554",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Away In A Manger",
+      "artist": "Dennis Jernigan & Family",
+      "album": "Jernigan Family Christmas 2004",
+      "minsec": "2:55",
+      "duration": 175282,
+      "picture": "az_B121768_Jernigan Family Christmas 2004_Dennis Jernigan & Family.jpg",
+      "buycd": "",
+	  "songid": "21669",
 	  "type" : "S"
     },
     
@@ -230,15 +194,15 @@
     },
     
     {
-      "title": "Light and Revelation",
+      "title": "Mothers day",
       "artist": "Curtis Dougherty",
-      "album": "Advent",
-      "minsec": "47:51",
-      "duration": 2871223,
+      "album": "CDM Ministries",
+      "minsec": "60:46",
+      "duration": 3646171,
       "picture": "curtis.jpg",
       "buycd": "https://www.cascadechapel.com",
-	  "songid": "16096",
-	  "type" : "?"
+	  "songid": "15876",
+	  "type" : "C"
     },
     
     {
@@ -254,283 +218,295 @@
     },
     
     {
-      "title": "All Praise to You",
-      "artist": "All Sons & Daughters",
-      "album": "Season One",
-      "minsec": "4:40",
-      "duration": 280712,
-      "picture": "az_B922926_Season One_All Sons & Daughters.jpg",
-      "buycd": "",
-	  "songid": "17737",
+      "title": "Saviour Of The World",
+      "artist": "Hillsong Australia",
+      "album": "It's Christmas",
+      "minsec": "4:10",
+      "duration": 250854,
+      "picture": "az_21738_It's Christmas_Hillsong Worship.jpg",
+      "buycd": "https://music.apple.com/us/album/what-child-is-this/341752201?i=341752360&uo=4",
+	  "songid": "21737",
 	  "type" : "S"
     },
     
     {
-      "title": "Keep My Eyes On You",
-      "artist": "Kelly Willard",
-      "album": "Message from a King",
-      "minsec": "3:57",
-      "duration": 237061,
-      "picture": "az_16485_Message from a King_Kelly Willard.jpg",
+      "title": "Once in Royal David's City",
+      "artist": "Porter Music Box Company",
+      "album": "Music Box Old Fashioned Christmas",
+      "minsec": "2:14",
+      "duration": 134452,
+      "picture": "az_B1211059_Music Box Old Fashioned Christmas_Porter Music Box Company.jpg",
       "buycd": "",
-	  "songid": "16485",
+	  "songid": "21992",
 	  "type" : "S"
     },
     
     {
-      "title": "We Still Believe",
-      "artist": "Kathryn Scott",
-      "album": "Worship Tools - We Still Believe (Resource Edition)",
-      "minsec": "4:59",
-      "duration": 299206,
-      "picture": "az_16354_Worship Tools - We Still Believe (Resource Edition)_Kathryn Scott.jpg",
+      "title": "How Great Our Joy",
+      "artist": "Bob Fitts",
+      "album": "World's Best Praise And Worship: Christmas",
+      "minsec": "3:12",
+      "duration": 192392,
+      "picture": "az_B121687_World's Best Praise And Worship Christmas_Bob Fitts.jpg",
       "buycd": "",
-	  "songid": "16354",
+	  "songid": "21572",
 	  "type" : "S"
     },
     
     {
-      "title": "What You Are",
-      "artist": "Integrity's Hosanna! Music;Don Harris",
-      "album": "Only God For Me",
-      "minsec": "4:45",
-      "duration": 285335,
-      "picture": "az_15190_Only God For Me_Integrity's Hosanna MusicDon Harris.jpg",
+      "title": "O Holy Night",
+      "artist": "David Phelps",
+      "album": "Gaither Gospel Series: Christmas In The Country",
+      "minsec": "5:18",
+      "duration": 318589,
+      "picture": "az_B1211087_Gaither Gospel Series Christmas In The Country_David Phelps.jpg",
       "buycd": "",
-	  "songid": "15190",
+	  "songid": "22020",
 	  "type" : "S"
     },
     
     {
-      "title": "People of the Lord",
-      "artist": "Robert Gay;Integrity's Hosanna! Music",
-      "album": "Victor's Crown",
-      "minsec": "4:18",
-      "duration": 258090,
-      "picture": "az_B9251047_Victor's Crown_Robert GayIntegrity's Hosanna Music.jpg",
-      "buycd": "",
-	  "songid": "17868",
-	  "type" : "S"
-    },
-    
-    {
-      "title": "Jesus You Are My Healer",
+      "title": "I'll Give My Heart",
       "artist": "Don Moen",
-      "album": "Thank You Lord",
-      "minsec": "7:00",
-      "duration": 420180,
-      "picture": "az_14973_Thank You Lord_Don Moen.jpg",
+      "album": "Praise And Worship- Christmas",
+      "minsec": "2:29",
+      "duration": 149159,
+      "picture": "az_B121788_Praise And Worship- Christmas_Don Moen.jpg",
       "buycd": "",
-	  "songid": "14973",
+	  "songid": "21695",
 	  "type" : "S"
     },
     
     {
-      "title": "We Cannot Contain All You Pour Out",
-      "artist": "Vineyard Worship",
-      "album": "Reveal: New Songs from Vineyard Worship",
-      "minsec": "4:23",
-      "duration": 263210,
-      "picture": "az_B925953_Reveal New Songs from Vineyard Worship_Vineyard Worship.jpg",
+      "title": "Let There Be Joy",
+      "artist": "Joy Gardner",
+      "album": "Bill & Gloria Gaither & Their Homecoming Friends: Christmas In South Africa",
+      "minsec": "6:31",
+      "duration": 391471,
+      "picture": "az_B121849_Bill & Gloria Gaither & Their Homecoming Friends Christmas In South Africa_Joy Gardner.jpg",
       "buycd": "",
-	  "songid": "17774",
+	  "songid": "21772",
 	  "type" : "S"
     },
     
     {
-      "title": "I Will Come to You",
-      "artist": "Integrity Worship Musicians",
-      "album": "Faith: Instrumental by Interludes",
-      "minsec": "4:45",
-      "duration": 285335,
-      "picture": "az_15432_Faith Instrumental by Interludes_Integrity Worship Musicians.jpg",
+      "title": "The First Noel",
+      "artist": "Jaci Velasquez",
+      "album": "Christmas",
+      "minsec": "3:19",
+      "duration": 199463,
+      "picture": "az_B121826_Christmas_Jaci Velasquez.jpg",
       "buycd": "",
-	  "songid": "15432",
+	  "songid": "21749",
 	  "type" : "S"
     },
     
     {
-      "title": "Crown Him With Many Crowns",
-      "artist": "Integrity's Hosanna! Music;Bob Fitts",
-      "album": "Hosanna Gold",
-      "minsec": "4:02",
-      "duration": 242886,
-      "picture": "az_15296_Hosanna Gold_Integrity's Hosanna MusicBob Fitts.jpg",
+      "title": "Silent Night",
+      "artist": "101 Strings Orchestra",
+      "album": "Treasury of Christmas Favorites 3 - WE WISH YOU A MERRY CHRISTMAS",
+      "minsec": "2:48",
+      "duration": 168534,
+      "picture": "81D0Wn4kPIL._SL1409_.jpg",
       "buycd": "",
-	  "songid": "15296",
+	  "songid": "21473",
 	  "type" : "S"
     },
     
     {
-      "title": "Face To Face",
-      "artist": "Kim Walker-Smith;Skyler Smith",
-      "album": "Home",
-      "minsec": "3:57",
-      "duration": 237584,
-      "picture": "az_16555_Home_Kim Walker-SmithSkyler Smith.jpg",
+      "title": "God Rest Ye Merry Gentlemen",
+      "artist": "Maranatha! Christmas",
+      "album": "World's Greatest Christmas",
+      "minsec": "2:11",
+      "duration": 131187,
+      "picture": "az_B121891_World's Greatest Christmas_Maranatha Christmas.jpg",
       "buycd": "",
-	  "songid": "16555",
+	  "songid": "21814",
 	  "type" : "S"
     },
     
     {
-      "title": "The Cross-Centered Life Part 3",
-      "artist": "Paul Washer",
-      "album": "Grace Community Church",
-      "minsec": "73:51",
-      "duration": 4431099,
-      "genre": "Other",
-      "picture": "paul_washer_profile.jpg",
-      "buycd": "http://www.heartcrymissionary.com/",
-	  "songid": "5660",
-	  "type" : "C"
+      "title": "Angels We Have Heard On High",
+      "artist": "Steven Curtis Chapman",
+      "album": "Music Of Christmas",
+      "minsec": "5:40",
+      "duration": 340862,
+      "picture": "az_B1211005_Music Of Christmas_Steven Curtis Chapman.jpg",
+      "buycd": "",
+	  "songid": "21928",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Amazing Grace",
+      "artist": "Swingle Singers",
+      "album": "Unwrapped",
+      "minsec": "3:43",
+      "duration": 223955,
+      "picture": "az_B1211010_Unwrapped_Swingle Singers.jpg",
+      "buycd": "",
+	  "songid": "21933",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "Bethlehem's Treasure",
+      "artist": "Bob Fitts/Kelly Willard",
+      "album": "Songs 4 Worship Christmas Joy",
+      "minsec": "3:11",
+      "duration": 191582,
+      "picture": "az_B1211106_Songs 4 Worship Christmas Joy_Bob FittsKelly Willard.jpg",
+      "buycd": "",
+	  "songid": "22039",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "The Friendly Beasts (Lp Version)",
+      "artist": "Peter, Paul & Mary",
+      "album": "A Holiday Celebration With The New York Choral Society",
+      "minsec": "3:29",
+      "duration": 209789,
+      "picture": "az_B121977_A Holiday Celebration With The New York Choral Society_Peter, Paul & Mary.jpg",
+      "buycd": "",
+	  "songid": "21900",
+	  "type" : "S"
+    },
+    
+    {
+      "title": "While The Shepherds Watch Their Flocks",
+      "artist": "101 Strings Orchestra",
+      "album": "The Glory Of Christmas",
+      "minsec": "2:52",
+      "duration": 172244,
+      "genre": "Christmas",
+      "picture": "R-2082412-1275790334.jpeg.jpg",
+      "buycd": "",
+	  "songid": "22077",
+	  "type" : "S"
     }
   ],
   "song_queue": [
     
     {
-      "title": "Paul Washer Exit",
-      "artist": "Paul Washer",
-      "album": "Heartcry Missionary Society",
-      "minsec": "0:45",
-      "duration": 45610,
-      "picture": "paul_washer_profile.jpg",
-      "buycd": "",
-	  "songid": "13123",
-	  "type" : "?"
-    },
-    
-    {
-      "title": "Hungry (Falling On My Knees)",
-      "artist": "Kathryn Scott",
-      "album": "Satisfy",
-      "minsec": "5:03",
-      "duration": 303020,
-      "picture": "az_16364_Satisfy_Kathryn Scott.jpg",
-      "buycd": "",
-	  "songid": "16364",
+      "title": "Jesus We Enthrone You",
+      "artist": "Don Moen",
+      "album": "Emmanuel Has Come",
+      "minsec": "4:10",
+      "duration": 250358,
+      "picture": "az_21678_Emmanuel Has Come_Don Moen.jpg",
+      "buycd": "https://music.apple.com/us/album/emmanuel-has-come/652965983?i=652967114&uo=4",
+	  "songid": "21693",
 	  "type" : "S"
     },
     
     {
-      "title": "God Alone / Come Unto Me (Medley)",
-      "artist": "Kelly Willard",
-      "album": "Psalms, Hymns and Spiritual Songs",
-      "minsec": "6:26",
-      "duration": 386926,
-      "picture": "az_16403_Psalms, Hymns and Spiritual Songs_Kelly Willard.jpg",
+      "title": "Have Yourself A Merry Little Christmas",
+      "artist": "3 For 1",
+      "album": "Christmas",
+      "minsec": "4:31",
+      "duration": 271099,
+      "picture": "az_B121605_Christmas_3 For 1.jpg",
       "buycd": "",
-	  "songid": "16403",
+	  "songid": "21454",
 	  "type" : "S"
     },
     
     {
-      "title": "My Worth Is Not in What I Own",
-      "artist": "Graham Kendrick",
-      "album": "My Worth Is Not in What I Own",
-      "minsec": "4:20",
-      "duration": 260362,
-      "picture": "az_15044_My Worth Is Not in What I Own_Graham Kendrick.jpg",
+      "title": "Hallelujah",
+      "artist": "Hillsong",
+      "album": "Songs 4 Worship: Christmas [Disc 2]",
+      "minsec": "5:05",
+      "duration": 305293,
+      "picture": "az_B121823_Songs 4 Worship Christmas [Disc 2]_Hillsong.jpg",
       "buycd": "",
-	  "songid": "15044",
+	  "songid": "21746",
 	  "type" : "S"
     },
     
     {
-      "title": "All Is Well (Live)",
-      "artist": "Vineyard Worship;Marie Barnett",
-      "album": "Where the Mercy Falls (Worship from the 2013 Vineyard National Conference, Vol. 2)",
-      "minsec": "7:19",
-      "duration": 439876,
-      "picture": "az_B922386_Where the Mercy Falls (Worship from the 2013 Vineyard National Conference, Vol. 2)_Vineyard WorshipMarie Barnett.jpg",
+      "title": "On a Snowy Christmas Night",
+      "artist": "Porter Music Box Company",
+      "album": "Music Box Old Fashioned Christmas",
+      "minsec": "2:08",
+      "duration": 128313,
+      "picture": "az_B1211056_Music Box Old Fashioned Christmas_Porter Music Box Company.jpg",
       "buycd": "",
-	  "songid": "17197",
+	  "songid": "21989",
 	  "type" : "S"
     },
     
     {
-      "title": "First Breath",
-      "artist": "Kimberly and Alberto Rivera",
-      "album": "From His Heart to Yours",
-      "minsec": "6:25",
-      "duration": 385724,
-      "picture": "az_B922374_From His Heart to Yours_Kimberly and Alberto Rivera.jpg",
+      "title": "O Come All Ye Faithful",
+      "artist": "Steven Curtis Chapman",
+      "album": "Music Of Christmas",
+      "minsec": "4:18",
+      "duration": 258890,
+      "picture": "az_B1211009_Music Of Christmas_Steven Curtis Chapman.jpg",
       "buycd": "",
-	  "songid": "17185",
+	  "songid": "21932",
 	  "type" : "S"
     },
     
     {
-      "title": "Magnificent (Live)",
-      "artist": "Hillsong Worship",
-      "album": "Blessed (Live)",
-      "minsec": "5:22",
-      "duration": 322534,
-      "picture": "az_B9251106_Blessed (Live)_Hillsong Worship.jpg",
+      "title": "Don't Save It All For Christmas Day",
+      "artist": "Avalon",
+      "album": "WOW Christmas: Green [Disc 1]",
+      "minsec": "4:45",
+      "duration": 285406,
+      "picture": "az_B1211130_WOW Christmas Green [Disc 1]_Avalon.jpg",
       "buycd": "",
-	  "songid": "17927",
+	  "songid": "22066",
 	  "type" : "S"
     },
     
     {
-      "title": "Thou Art a Shield For Me",
-      "artist": "Kent Henry;Integrity's Hosanna! Music",
-      "album": "Glorify Thy Name",
-      "minsec": "2:38",
-      "duration": 158720,
-      "picture": "az_16546_Glorify Thy Name_Kent HenryIntegrity's Hosanna Music.jpg",
+      "title": "Breath Of Heaven (Mary's Song)",
+      "artist": "Amy Grant",
+      "album": "Home For Christmas (Remastered)",
+      "minsec": "5:31",
+      "duration": 331886,
+      "picture": "az_B121627_Home For Christmas (Remastered)_Amy Grant.jpg",
       "buycd": "",
-	  "songid": "16546",
+	  "songid": "21499",
 	  "type" : "S"
     },
     
     {
-      "title": "Revival (feat. New Irish Choir & Orchestra) [Live]",
-      "artist": "Robin Mark;New Irish Choir & Orchestra",
-      "album": "A Belfast Symphony (feat. New Irish Choir & Orchestra) [Live]",
-      "minsec": "6:05",
-      "duration": 365558,
-      "picture": "az_B922203_A Belfast Symphony (feat. New Irish Choir & Orchestra) [Live]_Robin MarkNew Irish Choir & Orchestra.jpg",
+      "title": "I Heard The Bells On Christmas Day",
+      "artist": "Steve Hindalong",
+      "album": "City On A Hill: It's Christmas Time",
+      "minsec": "0:32",
+      "duration": 32914,
+      "picture": "az_B1211109_City On A Hill It's Christmas Time_Steve Hindalong.jpg",
       "buycd": "",
-	  "songid": "17014",
+	  "songid": "22042",
 	  "type" : "S"
     },
     
     {
-      "title": "Adonai",
-      "artist": "Heritage Singers",
-      "album": "Renew Me",
-      "minsec": "4:17",
-      "duration": 257776,
-      "picture": "az_B922306_Renew Me_Heritage Singers.jpg",
-      "buycd": "",
-	  "songid": "17117",
+      "title": "Silent Night",
+      "artist": "Il Divo",
+      "album": "The Christmas Collection",
+      "minsec": "3:34",
+      "duration": 214805,
+      "picture": "az_21623_The Christmas Collection_Il Divo.jpg",
+      "buycd": "https://music.apple.com/us/album/o-holy-night/203803456?i=203803474&uo=4",
+	  "songid": "21627",
 	  "type" : "S"
     },
     
     {
-      "title": "More Love, More Power",
-      "artist": "Studio Musicians",
-      "album": "Acoustic Worship - America's 25 Favorite Praise and Worship",
-      "minsec": "2:37",
-      "duration": 157335,
-      "picture": "az_B922569_Acoustic Worship - America's 25 Favorite Praise and Worship_Studio Musicians.jpg",
+      "title": "While The Shepherds Watch Their Flocks",
+      "artist": "101 Strings Orchestra",
+      "album": "The Glory Of Christmas",
+      "minsec": "2:52",
+      "duration": 172244,
+      "genre": "Christmas",
+      "picture": "R-2082412-1275790334.jpeg.jpg",
       "buycd": "",
-	  "songid": "17380",
+	  "songid": "22077",
 	  "type" : "S"
-    },
-    
-    {
-      "title": "The Cross-Centered Life Part 3",
-      "artist": "Paul Washer",
-      "album": "Grace Community Church",
-      "minsec": "73:51",
-      "duration": 4431099,
-      "genre": "Other",
-      "picture": "paul_washer_profile.jpg",
-      "buycd": "http://www.heartcrymissionary.com/",
-	  "songid": "5660",
-	  "type" : "C"
     }
   ]
 }
