@@ -71,9 +71,17 @@ mongoose
     })
 
     io.listen(3000);
-    const watcher = chokidar.watch('./ftp/info.json').on('change', () => {
+    const watcher = chokidar.watch('./ftp/info.json', {
+        awaitWriteFinish: {
+            stabilityThreshold: 60000,
+            pollInterval: 100
+        }
+    }).on('change', () => {
         try {
             fs.readFile('./ftp/info.json', async (err, data) => {
+                if (err) {
+                    console.error(err)
+                }
                 const current = JSON.parse(data)
                 const updatedInfo = await SongInfo.replaceOne({}, current)
             })
