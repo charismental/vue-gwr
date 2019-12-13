@@ -86,27 +86,14 @@
     </v-app-bar>
 
     <v-content>
-      <v-footer padless>
-        <v-card
-          flat
-          tile
-          width="100%"
-          class="secondary text-center"
-        >
-        <v-img
-          :src="imgUrl(currentSongInfo)"
-          height="100px"
-          max-width="100px"
-        >
-          </v-img>
-        </v-card>
-      </v-footer>
       <v-container fluid>
         <v-row>
-          <v-col cols="12" md="6">
-            <player />
+          <v-col cols="12" md="6" v-if="!$vuetify.breakpoint.smAndDown || $route.name === 'home'">
+            <v-fade-transition mode="out-in">
+              <player />
+            </v-fade-transition>
           </v-col>
-          <v-col cols="12" md="6">
+          <v-col cols="12" md="6" v-if="$vuetify.breakpoint.mdAndUp || $route.name !== 'home' ">
             <transition name="fade">
               <router-view></router-view>
             </transition>
@@ -114,6 +101,49 @@
         </v-row>
       </v-container>
     </v-content>
+    <v-expand-transition>
+      <v-footer app padless v-if="$vuetify.breakpoint.smAndDown && $route.name !== 'home'">
+        <v-card
+          flat
+          tile
+          height="100px"
+          width="100%"
+          class="secondary text-center"
+        >
+          <v-container fluid class="pa-0">
+            <v-row class="ml-0" align="center">
+              <v-col class="pa-0" col="3">
+                <v-img
+                  :src="imgUrl"
+                  height="100px"
+                  max-width="100px"
+                >
+                  </v-img>
+              </v-col>
+              <v-col col="8" class="pr-0">
+                <div class="marquee-container">
+                  <span
+                    class="d-block text-left title"
+                    :class="[marqueeTrigger(currentSongInfo.title, 16) ? 'marquee' : '']">{{  currentSongInfo.title }}</span>
+                  <span
+                    class="d-block text-left mt-n1 subtitle-1"
+                    :class="[marqueeTrigger(currentSongInfo.artist, 18) ? 'marquee' : '']">{{ currentSongInfo.artist }}</span>
+                </div>
+              </v-col>
+              <v-spacer></v-spacer>
+              <v-col col="1" class="align-center pl-0 pr-7">
+                <v-btn text icon height="40" width="40" @click="playPause" v-if="!isPlaying">
+                  <v-icon size="40">play_arrow</v-icon>
+                </v-btn>
+                <v-btn text icon height="40" width="40" @click="playPause" v-else>
+                  <v-icon size="40">pause</v-icon>
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card>
+      </v-footer>
+    </v-expand-transition>
     <v-bottom-navigation
       app
       :value="activeBtn"
@@ -155,12 +185,30 @@ export default Vue.extend({
   },
 
   data: () => ({
+    isConnected: false,
     activeBtn: 0,
     searchTerm: '',
-    sideNav: false
+    sideNav: false,
+    isMinimized: false
   }),
+  created() {
+    this.$store.dispatch("getCurrentSongs")
+  },
+  // @ts-ignore
+  sockets: {
+    connect() {
+      this.isConnected = true
+    },
+
+    disconnect() {
+      this.isConnected = false
+    },
+    updateSongInfo() {
+      this.refreshSongInfo()
+    }
+  },
   computed: {
-    ...mapGetters(['user', 'currentSongInfo']),
+    ...mapGetters(['user', 'currentSongInfo', 'loading', 'isPlaying', 'imgUrl']),
     navItems() {
       let items = [
         { icon: 'library_music', title: 'Songs', link: '/songs' },
@@ -170,28 +218,29 @@ export default Vue.extend({
       if (this.user) {
         items = [
           // { icon: 'chat', title: 'Posts', link: '/posts' },
-          { icon: 'create', title: 'Create Post', link: '/post/add' }
+          { icon: 'create', title: 'Placeholder link', link: '/post/add' }
         ]
       }
       return items
     },
   },
   methods: {
+    refreshSongInfo() {
+      this.$store.dispatch("getCurrentSongs")
+      // eslint-disable-next-line no-console
+      console.log("update the song info, jimmy!")
+    },
+    playPause() {
+      this.$store.dispatch('playPause')
+    },
     toggleSideNav() {
       this.sideNav = !this.sideNav
     },
     handleSignoutUser() {
       this.$store.dispatch('signoutUser')
     },
-    imgUrl(song) {
-      const url = "https://radiomv.org/samHTMweb/"
-      if (song.picture) {
-        return url + song.picture
-      } else if (this.loading) {
-        return url + "loading.gif"
-      } else {
-        return url + "customMissing.jpg"
-      }
+    marqueeTrigger (el, val) {
+      return !!(el && el.length > val)
     }
   }
 });
@@ -222,5 +271,26 @@ export default Vue.extend({
 .main-content {
     border-radius: 20px !important;
     background: linear-gradient(to bottom right, #7c587f, #4c3f77);
+}
+@keyframes marquee {
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(-130%) }
+}
+@-webkit-keyframes marquee {
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(-130%) }
+}
+.marquee-container {
+  overflow: hidden;
+  width: 150px;
+}
+.marquee {
+  white-space: nowrap;
+  animation: marquee 8s linear infinite;
+  -webkit-animation: marquee 8s linear infinite;
+}
+.marquee:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }
 </style>
