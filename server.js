@@ -61,8 +61,10 @@ mongoose
     });
 
     server.applyMiddleware({ app });
-
-    httpServer.listen({ port: process.env.PORT || 4000 });
+    const port = process.env.PORT || 4000
+    httpServer.listen(port, () => {
+        console.log(`Server listing on port ${port}`)
+    });
 
     io.sockets.on('connection', socket => {
         console.log('A new connection!');
