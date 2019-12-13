@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
+import { Howl, Howler } from "howler"
 import { defaultClient as ApolloClient } from '../main'
 
 
@@ -29,9 +30,14 @@ export default new Vuex.Store({
     loading: false,
     error: null,
     authError: null,
-    searchResults: []
+    searchResults: [],
+    isPlaying: false,
+    hqStream: "http://136.0.16.57:8000/.stream"
   },
   mutations: {
+    SET_IS_PLAYING: (state, bool) => {
+      state.isPlaying = bool
+    },
     SET_SONGS: (state, songs) => {
       state.songs = songs
     },
@@ -63,6 +69,15 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    playPause: ({ commit, state, getters }) => {
+      if (!state.isPlaying) {
+        getters.stream.play()
+        commit('SET_IS_PLAYING', true)
+      } else {
+        getters.stream.pause()
+        commit('SET_IS_PLAYING', false)
+      }
+    },
     getCurrentUser: ({ commit }) => {
       commit('SET_LOADING', true)
       ApolloClient
@@ -187,7 +202,26 @@ export default new Vuex.Store({
     song: state => state.song,
     currentSongInfo: state => state.currentSongInfo,
     currentSongHistory: state => state.currentSongHistory,
-    currentSongQueue: state => state.currentSongQueue
+    currentSongQueue: state => state.currentSongQueue,
+    isPlaying: state => state.isPlaying,
+    stream: state => {
+      const streamObject = new Howl({
+        src: state.hqStream,
+        html5: true,
+        onplayerror: () => console.log("play error")
+      })
+      return streamObject
+    },
+    imgUrl: (state, getters) => {
+      const url = "https://radiomv.org/samHTMweb/"
+      if (getters.currentSongInfo.picture) {
+        return url + getters.currentSongInfo.picture
+      } else if (state.loading) {
+        return url + "loading.gif"
+      } else {
+        return url + "customMissing.jpg"
+      }
+    }
   },
   modules: {
   }
