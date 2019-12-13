@@ -13,7 +13,7 @@ import VueSocketIO from 'vue-socket.io';
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
-export const SocketInstance = socketio('http://localhost:3000', {
+export const SocketInstance = socketio('http://localhost:4000', {
   reconnect: true
 });
 Vue.use(VueSocketIO, SocketInstance)

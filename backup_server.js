@@ -1,18 +1,14 @@
-const express = require('express');
-const app = express();
-const http = require('http');
-const httpServer = http.createServer(app);
-const { importSchema } = require('graphql-import');
-const { ApolloServer, AuthenticationError } = require("apollo-server-express");
+const { ApolloServer, AuthenticationError } = require("apollo-server");
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
-const io = require('socket.io')(httpServer);
+// const chokidar = require('chokidar');
+const io = require('socket.io')();
 
 // typeDefs and Resolvers
 const filePath = path.join(__dirname, "typeDefs.gql");
-const typeDefs = importSchema(fs.readFileSync(filePath, "utf-8"));
+const typeDefs = fs.readFileSync(filePath, "utf-8");
 const resolvers = require("./resolvers");
 
 // ENV variables and Mongoose Models
@@ -60,9 +56,9 @@ mongoose
         }
     });
 
-    server.applyMiddleware({ app });
-
-    httpServer.listen({ port: process.env.PORT || 4000 });
+    server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+        console.log(`Server listening on ${url}`);
+    });
 
     io.sockets.on('connection', socket => {
         console.log('A new connection!');
@@ -74,4 +70,22 @@ mongoose
         })
     })
 
-    io.listen(httpServer);
+    io.listen(3000);
+    // const watcher = chokidar.watch('./ftp/info.json', {
+    //     awaitWriteFinish: {
+    //         stabilityThreshold: 60000,
+    //         pollInterval: 100
+    //     }
+    // }).on('change', () => {
+    //     try {
+    //         fs.readFile('./ftp/info.json', async (err, data) => {
+    //             if (err) {
+    //                 console.error(err)
+    //             }
+    //             const current = JSON.parse(data)
+    //             const updatedInfo = await SongInfo.replaceOne({}, current)
+    //         })
+    //     } catch(err) {
+    //         console.error(err)
+    //     }
+    // });
