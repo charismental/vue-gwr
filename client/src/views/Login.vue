@@ -5,7 +5,7 @@
         <h1>{{ error.message }}</h1>
       </v-col>
     </v-row> -->
-    <v-card max-width="400" class="mx-auto mt-5">
+    <v-card color="secondary" max-width="400" class="mx-auto mt-5">
       <v-card-title>
         <h1
           v-if="!signup"
