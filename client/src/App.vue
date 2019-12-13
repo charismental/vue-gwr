@@ -86,14 +86,21 @@
     </v-app-bar>
 
     <v-content>
-      <!-- <v-card color="primary"
-        :class="{'mt-n12': $vuetify.breakpoint.mdAndDown}"
-        class="main-content mx-auto mt-5" width="90vw">
-        <player />
-        <transition name="fade">
-          <router-view></router-view>
-        </transition>
-      </v-card> -->
+      <v-footer padless>
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="secondary text-center"
+        >
+        <v-img
+          :src="imgUrl(currentSongInfo)"
+          height="100px"
+          max-width="100px"
+        >
+          </v-img>
+        </v-card>
+      </v-footer>
       <v-container fluid>
         <v-row>
           <v-col cols="12" md="6">
@@ -113,21 +120,21 @@
       grow
       fixed
       background-color="accent">
-      <v-btn>
+      <v-btn to="/">
         <span>Home</span>
         <v-icon>home</v-icon>
       </v-btn>
-      <v-btn>
+      <v-btn to="/history">
         <span>Recents</span>
         <v-icon>history</v-icon>
       </v-btn>
 
-      <v-btn>
+      <v-btn to="/favorites">
         <span>Favorites</span>
         <v-icon>favorite</v-icon>
       </v-btn>
 
-      <v-btn>
+      <v-btn to="/upcoming">
         <span>Upcoming</span>
         <v-icon>schedule</v-icon>
       </v-btn>
@@ -148,12 +155,12 @@ export default Vue.extend({
   },
 
   data: () => ({
-    activeBtn: -1,
+    activeBtn: 0,
     searchTerm: '',
     sideNav: false
   }),
   computed: {
-    ...mapGetters(['user']),
+    ...mapGetters(['user', 'currentSongInfo']),
     navItems() {
       let items = [
         { icon: 'library_music', title: 'Songs', link: '/songs' },
@@ -175,6 +182,16 @@ export default Vue.extend({
     },
     handleSignoutUser() {
       this.$store.dispatch('signoutUser')
+    },
+    imgUrl(song) {
+      const url = "https://radiomv.org/samHTMweb/"
+      if (song.picture) {
+        return url + song.picture
+      } else if (this.loading) {
+        return url + "loading.gif"
+      } else {
+        return url + "customMissing.jpg"
+      }
     }
   }
 });
