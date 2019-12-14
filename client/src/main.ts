@@ -13,15 +13,13 @@ import VueSocketIO from 'vue-socket.io';
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
-export const SocketInstance = socketio('http://localhost:4000', {
-  reconnect: true
-});
+export const SocketInstance = socketio('https://gwradio.herokuapp.com:5325', {transports: ['websocket']});
 Vue.use(VueSocketIO, SocketInstance)
 Vue.use(VueApollo)
 Vue.config.productionTip = false
 
 export const defaultClient = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://gwradio.herokuapp.com/graphql',
   fetchOptions: {
     credentials: 'include'
   },

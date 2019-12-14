@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
-const io = require('socket.io')(httpServer);
+const io = require('socket.io')(httpServer, {transports: ['websocket']});
 
 // typeDefs and Resolvers
 const filePath = path.join(__dirname, "typeDefs.gql");
