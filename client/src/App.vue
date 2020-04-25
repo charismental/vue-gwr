@@ -209,7 +209,7 @@ export default Vue.extend({
   name: 'App',
 
   components: {
-    Player,
+    Player
   },
   data: () => ({
     isConnected: false,
