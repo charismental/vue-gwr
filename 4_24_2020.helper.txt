@@ -1,0 +1,663 @@
+diff --git a/backup_server.js b/backup_server.js
+index 1d80699..909d5c2 100644
+--- a/backup_server.js
++++ b/backup_server.js
+@@ -1,91 +1,95 @@
+-const { ApolloServer, AuthenticationError } = require("apollo-server");
+-const mongoose = require("mongoose");
+-const fs = require("fs");
+-const path = require("path");
+-const jwt = require("jsonwebtoken");
++const { ApolloServer, AuthenticationError } = require('apollo-server');
++const mongoose = require('mongoose');
++const fs = require('fs');
++const path = require('path');
++const jwt = require('jsonwebtoken');
+ // const chokidar = require('chokidar');
+ const io = require('socket.io')();
+ 
+ // typeDefs and Resolvers
+-const filePath = path.join(__dirname, "typeDefs.gql");
+-const typeDefs = fs.readFileSync(filePath, "utf-8");
+-const resolvers = require("./resolvers");
++const filePath = path.join(__dirname, 'typeDefs.gql');
++const typeDefs = fs.readFileSync(filePath, 'utf-8');
++const resolvers = require('./resolvers');
+ 
+ // ENV variables and Mongoose Models
+-require("dotenv").config({ path: "variables.env" });
+-const User = require("./models/User");
+-const Song = require("./models/Song");
+-const SongInfo = require("./models/SongInfo");
++require('dotenv').config({ path: 'variables.env' });
++const User = require('./models/User');
++const Song = require('./models/Song');
++const SongInfo = require('./models/SongInfo');
+ 
++// Initial mongoDB connection
+ mongoose
+-    .connect(process.env.MONGO_URI, {
+-        useUnifiedTopology: true,
+-        useNewUrlParser: true,
+-        useCreateIndex: true,
+-        useFindAndModify: false,
+-    })
+-    .then(() => {
+-        console.log("Connected to MongoDB")
+-        SongInfo.watch()
+-            .on('change', () => {
+-                io.sockets.emit('updateSongInfo')
+-            })
+-    })
+-    .catch(err => console.error(err));
++  .connect(process.env.MONGO_URI, {
++    useUnifiedTopology: true,
++    useNewUrlParser: true,
++    useCreateIndex: true,
++    useFindAndModify: false,
++  })
++  .then(() => {
++    console.log('Connected to MongoDB');
++    SongInfo.watch().on('change', () => {
++      io.sockets.emit('updateSongInfo');
++    });
++  })
++  .catch((err) => console.error(err));
+ 
+-    const getUser = async token => {
+-        if (token) {
+-            try {
+-                return await jwt.verify(token, process.env.SECRET)
+-            } catch (err) {
+-                throw new AuthenticationError('Your session has ended. Please sign in again.')
+-            }
+-        }
++const getUser = async (token) => {
++  if (token) {
++    try {
++      return await jwt.verify(token, process.env.SECRET);
++    } catch (err) {
++      throw new AuthenticationError(
++        'Your session has ended. Please sign in again.'
++      );
+     }
++  }
++};
+ 
+-    const server = new ApolloServer({
+-        typeDefs,
+-        resolvers,
+-        formatError: error => ({
+-            name: error.name,
+-            message: error.message.replace("Context creation failed:", "")
+-        }),
+-        context: async ({ req }) => {
+-            const token = req.headers["authorization"]
+-            return { User, Song, SongInfo, currentUser: await getUser(token) }
+-        }
+-    });
++const server = new ApolloServer({
++  typeDefs,
++  resolvers,
++  formatError: (error) => ({
++    name: error.name,
++    message: error.message.replace('Context creation failed:', ''),
++  }),
++  context: async ({ req }) => {
++    const token = req.headers['authorization'];
++    return { User, Song, SongInfo, currentUser: await getUser(token) };
++  },
++});
+ 
+-    server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+-        console.log(`Server listening on ${url}`);
+-    });
++server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
++  console.log(`Server listening on ${url}`);
++});
+ 
+-    io.sockets.on('connection', socket => {
+-        console.log('A new connection!');
+-        socket.on('connected', msg => {
+-            console.log(msg);
+-        })
+-        socket.on('pingServer', msg => {
+-            console.log(msg)
+-        })
+-    })
++io.sockets.on('connection', (socket) => {
++  console.log('A new connection!');
++  socket.on('connected', (msg) => {
++    console.log(msg);
++  });
++  socket.on('pingServer', (msg) => {
++    console.log(msg);
++  });
++});
+ 
+-    io.listen(3000);
+-    const watcher = chokidar.watch('./ftp/info.json', {
+-        awaitWriteFinish: {
+-            stabilityThreshold: 60000,
+-            pollInterval: 100
+-        }
+-    }).on('change', () => {
+-        try {
+-            fs.readFile('./ftp/info.json', async (err, data) => {
+-                if (err) {
+-                    console.error(err)
+-                }
+-                const current = JSON.parse(data)
+-                const updatedInfo = await SongInfo.replaceOne({}, current)
+-            })
+-        } catch(err) {
+-            console.error(err)
++io.listen(3000);
++const watcher = chokidar
++  .watch('./ftp/info.json', {
++    awaitWriteFinish: {
++      stabilityThreshold: 60000,
++      pollInterval: 100,
++    },
++  })
++  .on('change', () => {
++    try {
++      fs.readFile('./ftp/info.json', async (err, data) => {
++        if (err) {
++          console.error(err);
+         }
+-    });
+\ No newline at end of file
++        const current = JSON.parse(data);
++        const updatedInfo = await SongInfo.replaceOne({}, current);
++      });
++    } catch (err) {
++      console.error(err);
++    }
++  });
+diff --git a/client/package-lock.json b/client/package-lock.json
+index 46c907a..6940aec 100644
+--- a/client/package-lock.json
++++ b/client/package-lock.json
+@@ -5413,7 +5413,8 @@
+         "ansi-regex": {
+           "version": "2.1.1",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "aproba": {
+           "version": "1.2.0",
+@@ -5434,12 +5435,14 @@
+         "balanced-match": {
+           "version": "1.0.0",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "brace-expansion": {
+           "version": "1.1.11",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "balanced-match": "^1.0.0",
+             "concat-map": "0.0.1"
+@@ -5454,17 +5457,20 @@
+         "code-point-at": {
+           "version": "1.1.0",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "concat-map": {
+           "version": "0.0.1",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "console-control-strings": {
+           "version": "1.1.0",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "core-util-is": {
+           "version": "1.0.2",
+@@ -5581,7 +5587,8 @@
+         "inherits": {
+           "version": "2.0.3",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "ini": {
+           "version": "1.3.5",
+@@ -5593,6 +5600,7 @@
+           "version": "1.0.0",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "number-is-nan": "^1.0.0"
+           }
+@@ -5607,6 +5615,7 @@
+           "version": "3.0.4",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "brace-expansion": "^1.1.7"
+           }
+@@ -5614,12 +5623,14 @@
+         "minimist": {
+           "version": "0.0.8",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "minipass": {
+           "version": "2.3.5",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "safe-buffer": "^5.1.2",
+             "yallist": "^3.0.0"
+@@ -5638,6 +5649,7 @@
+           "version": "0.5.1",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "minimist": "0.0.8"
+           }
+@@ -5718,7 +5730,8 @@
+         "number-is-nan": {
+           "version": "1.0.1",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "object-assign": {
+           "version": "4.1.1",
+@@ -5730,6 +5743,7 @@
+           "version": "1.4.0",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "wrappy": "1"
+           }
+@@ -5815,7 +5829,8 @@
+         "safe-buffer": {
+           "version": "5.1.2",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "safer-buffer": {
+           "version": "2.1.2",
+@@ -5851,6 +5866,7 @@
+           "version": "1.0.2",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "code-point-at": "^1.0.0",
+             "is-fullwidth-code-point": "^1.0.0",
+@@ -5870,6 +5886,7 @@
+           "version": "3.0.1",
+           "bundled": true,
+           "dev": true,
++          "optional": true,
+           "requires": {
+             "ansi-regex": "^2.0.0"
+           }
+@@ -5913,12 +5930,14 @@
+         "wrappy": {
+           "version": "1.0.2",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         },
+         "yallist": {
+           "version": "3.0.3",
+           "bundled": true,
+-          "dev": true
++          "dev": true,
++          "optional": true
+         }
+       }
+     },
+diff --git a/client/src/store/index.ts b/client/src/store/index.ts
+index 4f8c98b..1353888 100644
+--- a/client/src/store/index.ts
++++ b/client/src/store/index.ts
+@@ -32,197 +32,190 @@ export default new Vuex.Store({
+     authError: null,
+     searchResults: [],
+     isPlaying: false,
+-    hqStream: "http://136.0.16.57:8000/.stream"
++    hqStream: 'https://ssl.rcast.net/stream/64776',
+   },
+   mutations: {
+     SET_IS_PLAYING: (state, bool) => {
+-      state.isPlaying = bool
++      state.isPlaying = bool;
+     },
+     SET_SONGS: (state, songs) => {
+-      state.songs = songs
++      state.songs = songs;
+     },
+     SET_CURRENT_SONG_INFO: (state, song) => {
+-      state.currentSongInfo = song
++      state.currentSongInfo = song;
+     },
+     SET_CURRENT_SONG_HISTORY: (state, songs) => {
+-      state.currentSongHistory = songs
++      state.currentSongHistory = songs;
+     },
+     SET_CURRENT_SONG_QUEUE: (state, songs) => {
+-      state.currentSongQueue = songs
++      state.currentSongQueue = songs;
+     },
+     SET_SONG: (state, song) => {
+-      state.song = song
++      state.song = song;
+     },
+     SET_ERROR: (state, error) => {
+-      state.error = error
++      state.error = error;
+     },
+     SET_AUTH_ERROR: (state, authError) => {
+-      state.authError = authError
++      state.authError = authError;
+     },
+     SET_USER: (state, user) => {
+-      state.user = user
++      state.user = user;
+     },
+-    CLEAR_USER: state => state.user = null,
+-    CLEAR_ERROR: state => state.error = null,
++    CLEAR_USER: (state) => (state.user = null),
++    CLEAR_ERROR: (state) => (state.error = null),
+     SET_LOADING: (state, bool) => {
+-      state.loading = bool
+-    }
++      state.loading = bool;
++    },
+   },
+   actions: {
+     playPause: ({ commit, state, getters }) => {
+       if (!state.isPlaying) {
+-        getters.stream.play()
+-        commit('SET_IS_PLAYING', true)
++        getters.stream.play();
++        commit('SET_IS_PLAYING', true);
+       } else {
+-        getters.stream.pause()
+-        commit('SET_IS_PLAYING', false)
++        getters.stream.pause();
++        commit('SET_IS_PLAYING', false);
+       }
+     },
+     getCurrentUser: ({ commit }) => {
+-      commit('SET_LOADING', true)
+-      ApolloClient
+-        .query({
+-          query: GET_CURRENT_USER
+-        })
++      commit('SET_LOADING', true);
++      ApolloClient.query({
++        query: GET_CURRENT_USER,
++      })
+         .then(({ data }) => {
+-          commit('SET_LOADING', false)
+-          commit('SET_USER', data.getCurrentUser)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          console.error(err)
++          commit('SET_LOADING', false);
++          commit('SET_USER', data.getCurrentUser);
+         })
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          console.error(err);
++        });
+     },
+     signinUser: ({ commit }, formData) => {
+-      commit('CLEAR_ERROR')
+-      commit('SET_LOADING', true)
++      commit('CLEAR_ERROR');
++      commit('SET_LOADING', true);
+ 
+-      ApolloClient
+-        .mutate({
+-          mutation: SIGNIN_USER,
+-          variables: formData
+-        })
++      ApolloClient.mutate({
++        mutation: SIGNIN_USER,
++        variables: formData,
++      })
+         .then(({ data }) => {
+-          commit('SET_LOADING', false)
+-          localStorage.setItem('token', data.signinUser.token)
+-          router.go(0)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          commit('SET_ERROR', err)
++          commit('SET_LOADING', false);
++          localStorage.setItem('token', data.signinUser.token);
++          router.go(0);
+         })
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          commit('SET_ERROR', err);
++        });
+     },
+     signupUser: ({ commit }, formData) => {
+-      commit('CLEAR_ERROR')
+-      commit('SET_LOADING', true)
+-      ApolloClient
+-        .mutate({
+-          mutation: SIGNUP_USER,
+-          variables: {
+-            email: formData.email,
+-            password: formData.password,
+-            username: formData.username
+-          }
+-        })
++      commit('CLEAR_ERROR');
++      commit('SET_LOADING', true);
++      ApolloClient.mutate({
++        mutation: SIGNUP_USER,
++        variables: {
++          email: formData.email,
++          password: formData.password,
++          username: formData.username,
++        },
++      })
+         .then(({ data }) => {
+-          commit('SET_LOADING', false)
+-          localStorage.setItem('token', data.signupUser.token)
+-          router.go(0)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          commit('SET_ERROR', err)
++          commit('SET_LOADING', false);
++          localStorage.setItem('token', data.signupUser.token);
++          router.go(0);
+         })
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          commit('SET_ERROR', err);
++        });
+     },
+     signoutUser: async ({ commit }) => {
+-      commit('CLEAR_USER')
+-      localStorage.setItem('token', '')
+-      await ApolloClient.resetStore()
++      commit('CLEAR_USER');
++      localStorage.setItem('token', '');
++      await ApolloClient.resetStore();
+       if (router.currentRoute.path !== '/') {
+-        router.push('/')
++        router.push('/');
+       }
+     },
+     getCurrentSongs: async ({ commit }) => {
+-      commit('SET_LOADING', true)
+-      ApolloClient
+-        .query({
+-          query: GET_CURRENT_SONGS,
+-          fetchPolicy:'no-cache'
+-        })
++      commit('SET_LOADING', true);
++      ApolloClient.query({
++        query: GET_CURRENT_SONGS,
++        fetchPolicy: 'no-cache',
++      })
+         .then(({ data }) => {
+-          commit('SET_CURRENT_SONG_INFO', data.getCurrentSongs.song_info)
+-          commit('SET_CURRENT_SONG_HISTORY', data.getCurrentSongs.song_history)
+-          commit('SET_CURRENT_SONG_QUEUE', data.getCurrentSongs.song_queue)
+-          commit('SET_LOADING', false)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          console.error(err)
++          commit('SET_CURRENT_SONG_INFO', data.getCurrentSongs.song_info);
++          commit('SET_CURRENT_SONG_HISTORY', data.getCurrentSongs.song_history);
++          commit('SET_CURRENT_SONG_QUEUE', data.getCurrentSongs.song_queue);
++          commit('SET_LOADING', false);
+         })
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          console.error(err);
++        });
+     },
+     getSongs: async ({ commit }) => {
+-      commit('SET_LOADING', true)
+-      ApolloClient
+-        .query({
+-          query: GET_SONGS
+-        })
++      commit('SET_LOADING', true);
++      ApolloClient.query({
++        query: GET_SONGS,
++      })
+         .then(({ data }) => {
+-          commit('SET_SONGS', data.getSongs)
+-          commit('SET_LOADING', false)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          console.error(err)
++          commit('SET_SONGS', data.getSongs);
++          commit('SET_LOADING', false);
+         })
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          console.error(err);
++        });
+     },
+     getSong: async ({ commit }, songId) => {
+-      commit('SET_LOADING', true)
+-      ApolloClient
+-        .query({
+-          query: GET_SONG,
+-          variables: songId
+-        })
++      commit('SET_LOADING', true);
++      ApolloClient.query({
++        query: GET_SONG,
++        variables: songId,
++      })
+         .then(({ data }) => {
+-          commit('SET_LOADING', false)
+-          commit('SET_SONG', data.getSong)
+-        })
+-        .catch(err => {
+-          commit('SET_LOADING', false)
+-          console.error(err)
++          commit('SET_LOADING', false);
++          commit('SET_SONG', data.getSong);
+         })
+-    }
++        .catch((err) => {
++          commit('SET_LOADING', false);
++          console.error(err);
++        });
++    },
+   },
+   getters: {
+-    songs: state => state.songs,
+-    searchResults: state => state.searchResults,
+-    loading: state => state.loading,
+-    user: state => state.user,
+-    authError: state => state.authError,
+-    error: state => state.error,
+-    song: state => state.song,
+-    currentSongInfo: state => state.currentSongInfo,
+-    currentSongHistory: state => state.currentSongHistory,
+-    currentSongQueue: state => state.currentSongQueue,
+-    isPlaying: state => state.isPlaying,
+-    stream: state => {
++    songs: (state) => state.songs,
++    searchResults: (state) => state.searchResults,
++    loading: (state) => state.loading,
++    user: (state) => state.user,
++    authError: (state) => state.authError,
++    error: (state) => state.error,
++    song: (state) => state.song,
++    currentSongInfo: (state) => state.currentSongInfo,
++    currentSongHistory: (state) => state.currentSongHistory,
++    currentSongQueue: (state) => state.currentSongQueue,
++    isPlaying: (state) => state.isPlaying,
++    stream: (state) => {
+       const streamObject = new Howl({
+         src: state.hqStream,
+         html5: true,
+-        onplayerror: () => console.log("play error")
+-      })
+-      return streamObject
++        onplayerror: () => console.log('play error'),
++      });
++      return streamObject;
+     },
+     imgUrl: (state, getters) => {
+-      const url = "https://radiomv.org/samHTMweb/"
++      const url = 'https://radiomv.org/samHTMweb/';
+       if (getters.currentSongInfo.picture) {
+-        return url + getters.currentSongInfo.picture
++        return url + getters.currentSongInfo.picture;
+       } else if (state.loading) {
+-        return url + "loading.gif"
++        return url + 'loading.gif';
+       } else {
+-        return url + "customMissing.jpg"
++        return url + 'customMissing.jpg';
+       }
+-    }
++    },
+   },
+-  modules: {
+-  }
+-})
++  modules: {},
++});
