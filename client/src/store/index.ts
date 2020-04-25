@@ -104,6 +104,7 @@ export default new Vuex.Store({
           commit('SET_LOADING', false);
           localStorage.setItem('token', data.signinUser.token);
           router.go(0);
+          console.log('successfully logged in')
         })
         .catch((err) => {
           commit('SET_LOADING', false);
@@ -124,7 +125,7 @@ export default new Vuex.Store({
         .then(({ data }) => {
           commit('SET_LOADING', false);
           localStorage.setItem('token', data.signupUser.token);
-          router.go(0);
+          router.go(1);  //  Changed 0 to 1 worked for removing modal after login clicked
         })
         .catch((err) => {
           commit('SET_LOADING', false);
