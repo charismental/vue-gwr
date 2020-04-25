@@ -74,8 +74,8 @@ export default {
   margin-right: auto;
   border: 2px solid white;
   border-radius: 15px;
-  height: 300px;
-  max-width: 300px;
+  height: 400px;
+  max-width: 400px;
 }
 .mobile {
   height: 90vw;
