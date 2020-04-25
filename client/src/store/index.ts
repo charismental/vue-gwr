@@ -207,7 +207,7 @@ export default new Vuex.Store({
       return streamObject;
     },
     imgUrl: (state, getters) => {
-      const url = 'https://radiomv.org/samHTMweb/';
+      const url = 'https://cascadechapel.com/samHTMweb/';
       if (getters.currentSongInfo.picture) {
         return url + getters.currentSongInfo.picture;
       } else if (state.loading) {
