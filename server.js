@@ -32,6 +32,7 @@ mongoose
         console.log("Connected to MongoDB")
         SongInfo.watch()
             .on('change', () => {
+                console.log('an update is ready')
                 io.sockets.emit('updateSongInfo')
             })
     })

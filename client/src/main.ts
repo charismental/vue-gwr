@@ -14,6 +14,7 @@ import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
 export const SocketInstance = socketio('https://gwradio.herokuapp.com:14872', {transports: ['websocket']});
+// export const SocketInstance = socketio('http://localhost:4000', {transports: ['websocket']});
 Vue.use(VueSocketIO, SocketInstance)
 Vue.use(VueApollo)
 Vue.config.productionTip = false
