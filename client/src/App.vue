@@ -204,6 +204,7 @@
 import Vue from 'vue';
 import Player from './components/Player.vue';
 import { mapGetters } from 'vuex';
+import { socket } from 'socket.io'
 
 export default Vue.extend({
   name: 'App',
