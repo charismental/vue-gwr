@@ -188,7 +188,7 @@ export default Vue.extend({
 
   data: () => ({
     // socket: io('https://gwradio.herokuapp.com:14872'),
-    socket: io('localhost:4000'),
+    socket: io('https://gwradio.herokuapp.com/'),
     isConnected: false,
     activeBtn: 0,
     searchTerm: '',
