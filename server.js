@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
-const io = require('socket.io')(httpServer, {transports: ['websocket']});
+const io = require('socket.io')(httpServer);
 
 // typeDefs and Resolvers
 const filePath = path.join(__dirname, "typeDefs.gql");
@@ -67,14 +67,9 @@ mongoose
         console.log(`Server listing on port ${port}`)
     });
 
-    io.sockets.on('connection', socket => {
-        console.log('A new connection!');
-        socket.on('connected', msg => {
-            console.log(msg);
-        })
-        socket.on('pingServer', msg => {
-            console.log(msg)
-        })
+
+    io.on('connection', socket => {
+        console.log('A new connection ', socket.id)
     })
 
-    io.listen(httpServer);
+    // io.listen(httpServer);

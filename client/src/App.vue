@@ -175,6 +175,8 @@
 <script lang="ts">
 import Vue from 'vue';
 import Player from './components/Player.vue'
+// import { sockets } from 'socket.io';
+import io from 'socket.io-client'
 import { mapGetters } from 'vuex';
 
 export default Vue.extend({
@@ -185,6 +187,8 @@ export default Vue.extend({
   },
 
   data: () => ({
+    // socket: io('https://gwradio.herokuapp.com:14872'),
+    socket: io('localhost:4000'),
     isConnected: false,
     activeBtn: 0,
     searchTerm: '',
@@ -194,19 +198,14 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("getCurrentSongs")
   },
-  // @ts-ignore
-  sockets: {
-    connect() {
-      this.isConnected = true
-    },
-
-    disconnect() {
-      this.isConnected = false
-    },
-    updateSongInfo() {
-      this.refreshSongInfo()
-    }
-  },
+  // sockets: {
+  //   connect(): void {
+  //     this.isConnected = true
+  //   },
+  //   disconnect(): void {
+  //     this.isConnected = false
+  //   },
+  // },
   computed: {
     ...mapGetters(['user', 'currentSongInfo', 'loading', 'isPlaying', 'imgUrl']),
     navItems() {
@@ -224,8 +223,17 @@ export default Vue.extend({
       return items
     },
   },
+  mounted() {
+    this.socket.on('updateSongInfo', () => {
+      this.refreshSongInfo()
+    })
+  },
   methods: {
-    refreshSongInfo() {
+    async refreshSongInfo() {
+      function timeout(ms): Promise<void> {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      await timeout(13000)
       this.$store.dispatch("getCurrentSongs")
       // eslint-disable-next-line no-console
       console.log("update the song info, jimmy!")

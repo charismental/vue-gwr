@@ -7,15 +7,15 @@ import vuetify from './plugins/vuetify';
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-import socketio from 'socket.io-client';
-import VueSocketIO from 'vue-socket.io';
+// import socketio from 'socket.io-client';
+// import VueSocketIO from 'vue-socket.io';
 
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
-export const SocketInstance = socketio('https://gwradio.herokuapp.com:14872', {transports: ['websocket']});
+// export const SocketInstance = socketio('https://gwradio.herokuapp.com:14872', {transports: ['websocket']});
 // export const SocketInstance = socketio('http://localhost:4000', {transports: ['websocket']});
-Vue.use(VueSocketIO, SocketInstance)
+// Vue.use(VueSocketIO as any, SocketInstance)
 Vue.use(VueApollo)
 Vue.config.productionTip = false
 
