@@ -7,6 +7,11 @@ import vuetify from './plugins/vuetify';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 
+// Moved these to the top 
+import ApolloClient, { HttpLink, InMemoryCache } from 'apollo-boost';
+import { setContext } from 'apollo-link-context';
+import VueApollo, {} from 'vue-apollo';
+
 // import socketio from 'socket.io-client';
 // import VueSocketIO from 'vue-socket.io';
 
@@ -17,7 +22,9 @@ const {
   AnonymoustCredential,
 } = require('mongodb-stitch-browser-sdk');
 
-const client = Stitch.initializeDefaultAppClient('gracewaystitch-hcrtu');
+const APP_ID = 'gracewaystitch-hcrtu';
+
+const client = Stitch.initializeDefaultAppClient(APP_ID);
 
 const db = client
   .getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas')
@@ -42,8 +49,41 @@ client.auth
     console.error(err);
   });
 
-import ApolloClient from 'apollo-boost';
-import VueApollo from 'vue-apollo';
+// Stitch GraphQL endpoint - not sure if this and the above functions are required to exist together
+
+const app = Stitch.hasAppClient(APP_ID) ? Stitch.getAppClient(APP_ID) : Stitch.initializeAppClient(APP_ID);
+
+async function getAccessToken(credential) {
+  if (!app.auth.user) {
+    await app.auth.loginWithCredential(credential);
+  } else {
+    await app.auth.refreshAccessToken();
+  }
+  const { accessToken } = app.auth.activeUserAuthInfo;
+  return accessToken;
+}
+
+const credential = new AnonymoustCredential();
+const authorizationHeaderLink = setContext(async (_, { headers }) => {
+  const accessToken = await getAccessToken(credential);
+  return {
+    headers: {
+      ...headers,
+      Authorization: `Bearer ${accessToken}`,
+    },
+  };
+});
+
+//move this line to variables?
+const graphql_url = `https://us-west-2.aws.stitch.mongodb.com/api/client/v2.0/app/${APP_ID}/graphql`; 
+const httpLink = new HttpLink({ uri: graphql_url });
+
+const client = new ApolloClient({
+  link: authorizationHeaderLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
 
 // export const SocketInstance = socketio('https://gwradio.herokuapp.com:14872', {transports: ['websocket']});
 // export const SocketInstance = socketio('http://localhost:4000', {transports: ['websocket']});

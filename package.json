@@ -12,6 +12,7 @@
   "keywords": [],
   "author": "Tristin",
   "dependencies": {
+    "apollo-link-context": "^1.0.20",
     "apollo-server": "^2.12.0",
     "apollo-server-express": "^2.12.0",
     "bcrypt": "^3.0.8",
