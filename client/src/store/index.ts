@@ -32,7 +32,8 @@ export default new Vuex.Store({
     authError: null,
     searchResults: [],
     isPlaying: false,
-    hqStream: "http://136.0.16.57:8000/.stream"
+    // hqStream: "http://136.0.16.57:8000/.stream"
+    hqStream: "https://ssl.rcast.net/stream/64776"
   },
   mutations: {
     SET_IS_PLAYING: (state, bool) => {
@@ -213,7 +214,7 @@ export default new Vuex.Store({
       return streamObject
     },
     imgUrl: (state, getters) => {
-      const url = "https://radiomv.org/samHTMweb/"
+      const url = "https://cascadechapel.org/samHTMweb/"
       if (getters.currentSongInfo.picture) {
         return url + getters.currentSongInfo.picture
       } else if (state.loading) {
