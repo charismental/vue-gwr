@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "Tristin",
   "dependencies": {
-    "apollo-server": "^2.13.1",
+    "apollo-server": "^2.14.2",
     "apollo-server-express": "^2.13.1",
     "bcrypt": "^3.0.8",
     "chokidar": "^3.4.0",
