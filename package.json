@@ -21,7 +21,7 @@
     "jsonwebtoken": "^8.5.1",
     "md5": "^2.2.1",
     "mongoose": "^5.9.13",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
