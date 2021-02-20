@@ -33,7 +33,7 @@ export default new Vuex.Store({
     searchResults: [],
     isPlaying: false,
     // hqStream: "http://136.0.16.57:8000/.stream"
-    hqStream: "https://ssl.rcast.net/stream/64776"
+    hqStream: "https://us3.streamingpulse.com/ssl/graceway_pulse"
   },
   mutations: {
     SET_IS_PLAYING: (state, bool) => {
